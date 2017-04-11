@@ -37,7 +37,7 @@ public class ProductDaoImpl implements ProductDao {
 
     public Product getProductById(Integer id) {
         Session session = this.sessionFactory.getCurrentSession();
-        return session.load(Product.class, id);
+        return session.get(Product.class, id);
     }
 
     @SuppressWarnings("unchecked")

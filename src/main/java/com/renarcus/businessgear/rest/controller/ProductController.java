@@ -29,7 +29,12 @@ public class ProductController {
     }
 
     @GetMapping("/products/{id}")
-    public String getSpecificProduct(@PathVariable int id) {
+    public String getProductById(@PathVariable int id) {
+        return productService.getProductById(id).toString();
+    }
+
+    @GetMapping("/products_category/{id}")
+    public String getProductByCategory(@PathVariable int id) {
         return productService.getProductsByCategoryId(id).toString();
     }
 }

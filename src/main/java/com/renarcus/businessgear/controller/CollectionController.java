@@ -1,14 +1,17 @@
 package com.renarcus.businessgear.controller;
 
+import com.renarcus.businessgear.misc.JsonParser;
 import com.renarcus.businessgear.model.Product;
 import com.renarcus.businessgear.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -18,13 +21,6 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/products")
 public class CollectionController {
 
-    private ProductService productService;
-
-    @Autowired
-    @Qualifier(value = "productService")
-    public void setProductService(ProductService productService) {
-        this.productService = productService;
-    }
 
     @GetMapping("/collection")
     public String getCollection() {
@@ -32,13 +28,14 @@ public class CollectionController {
     }
 
     @GetMapping("/detail/{productId}")
-    public ModelAndView getProductDetails(ModelMap model, @PathVariable Integer productId) {
-        if (productId != null) {
-            Product product = productService.getProductById(productId);
-            model.addAttribute("product", product);
-            return new ModelAndView("detail", model);
+    public ModelAndView getProductDetails(@PathVariable Integer productId) {
+        if (productId != 0) {
+            RestTemplate restTemplate = new RestTemplate();
+            String url = "http://localhost:8080/api/products/{productId}";
+            Product product = restTemplate.getForObject(url, Product.class, productId);
+            return new ModelAndView("detail", "product", product);
         } else {
-            return new ModelAndView("collection", null);
+            return new ModelAndView("collection");
         }
     }
 

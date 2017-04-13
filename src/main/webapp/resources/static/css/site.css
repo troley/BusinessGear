@@ -136,6 +136,21 @@ header {
     margin-bottom: 60px;
 }
 
+.breadcrumbs {
+    margin: 10px 0 0 15px;
+}
+
+.breadcrumbs > *,
+.breadcrumbs > *:hover {
+    color: #3500ff;
+}
+
+.breadcrumbs span,
+.breadcrumbs span:hover {
+    color: #9c9b9b;
+    border-bottom: 1px solid #9c9b9b;
+}
+
 .panels-wrapper {
     margin-left: 5.5%;
 }
@@ -275,6 +290,17 @@ footer a:hover {
     color: black;
 }
 
+.back-to-collection h2 {
+    font-size: 24px;
+    margin: 40px 0 0 15px;
+}
+
+.back-to-collection a,
+.back-to-collection a:hover {
+    font-family: 'Merriweather', serif;
+    color: #9c9b9b;
+}
+
 /* HOVER IMG IN SHOWCASE */
 @media (min-width: 991px) {
 
@@ -305,8 +331,6 @@ footer a:hover {
         display: initial !important;
     }
 }
-
-/* HOVER IMG IN SHOWCASE */
 
 @media all and (max-width: 1200px) {
     .panels-wrapper {

@@ -18,7 +18,7 @@ public class ProductController {
     private ProductService productService;
 
     @Autowired
-    @Qualifier(value = "productService")
+    @Qualifier("productService")
     public void setProductService(ProductService productService) {
         this.productService = productService;
     }

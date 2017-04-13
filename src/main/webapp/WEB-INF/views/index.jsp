@@ -1,16 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Home</title>
 
-    <link rel="stylesheet" href="<c:url value="/resources/css/bootstrap/bootstrap.css"/>" />
-    <link rel="stylesheet" href="<c:url value="/resources/css/font-awesome/css/font-awesome.min.css"/>" />
-    <link rel="stylesheet" href="<c:url value="/resources/css/site.css"/>" />
-    <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700,700i|Inknut+Antiqua:600|Slabo+27px"
-          rel="stylesheet" />
+    <link rel="stylesheet" href="<c:url value="/resources/css/bootstrap/bootstrap.css"/>"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/font-awesome/css/font-awesome.min.css"/>"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/site.css"/>"/>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700,700i|Inknut+Antiqua:600|Slabo+27px|Merriweather"
+          rel="stylesheet"/>
 </head>
 <body>
 
@@ -109,96 +109,36 @@
                 <hr>
             </div>
         </div>
-        <div class="row gray-wrapper-row">
+        <div class="row gray-wrapper-row" ng-app="app" ng-controller="ProductsController as vm">
             <div class="col-md-12">
-                <div class="row">
-                    <div class="panels-wrapper">
-                        <div class="col-md-4">
-                            <div class="panel">
-                                <a href="#">
-                                    <div class="panel-image">
-                                        <img class="img-responsive" src="http://lorempixel.com/270/211"
-                                             alt="Lorem Ipsum">
+                <div ng-repeat="n in vm.range(1, (vm.products.length / 3) + vm.extra) | limitTo: 1">
+                    <div class="row">
+                        <div class="panels-wrapper">
+                            <div ng-repeat="product in vm.products.slice((n - 1) * 3, n * 3)">
+                                <div class="col-md-4">
+                                    <div class="panel">
+                                        <a href="${pageContext.request.contextPath}/products/detail/{{ product.id }}">
+                                            <div class="panel-image">
+                                                <img class="img-responsive" src="http://lorempixel.com/270/211"
+                                                     alt="Lorem Ipsum">
+                                            </div>
+                                            <div class="panel-image-title">
+                                                <h3>{{ product.name }}</h3>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="panel-image-title">
-                                        <h3>Manager Assistant</h3>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="panel">
-                                <a href="#">
-                                    <div class="panel-image">
-                                        <img class="img-responsive" src="http://placehold.it/270x211" alt="Lorem Ipsum">
-                                    </div>
-                                    <div class="panel-image-title">
-                                        <h3>Project </h3>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="panel">
-                                <a href="#">
-                                    <div class="panel-image">
-                                        <img class="img-responsive" src="http://placehold.it/270x211" alt="Lorem Ipsum">
-                                    </div>
-                                    <div class="panel-image-title">
-                                        <h3>Manager Assistant</h3>
-                                    </div>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="panels-wrapper">
-                        <div class="col-md-4">
-                            <div class="panel">
-                                <a href="#">
-                                    <div class="panel-image">
-                                        <img class="img-responsive" src="http://placehold.it/270x211" alt="Lorem Ipsum">
-                                    </div>
-                                    <div class="panel-image-title">
-                                        <h3>Manager Assistant</h3>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="panel">
-                                <a href="#">
-                                    <div class="panel-image">
-                                        <img class="img-responsive" src="http://placehold.it/270x211" alt="Lorem Ipsum">
-                                    </div>
-                                    <div class="panel-image-title">
-                                        <h3>Project </h3>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="panel">
-                                <a href="#">
-                                    <div class="panel-image">
-                                        <img class="img-responsive" src="http://placehold.it/270x211" alt="Lorem Ipsum">
-                                    </div>
-                                    <div class="panel-image-title">
-                                        <h3>Manager Assistant</h3>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="full-collection">
-                    <p>
-                        <a href="${pageContext.request.contextPath}/products/collection" class="default-a">
-                            See full collection &DoubleRightArrow;
-                        </a>
-                    </p>
-                </div>
+            </div>
+            <div class="full-collection">
+                <p>
+                    <a href="${pageContext.request.contextPath}/products/collection" class="default-a">
+                        See full collection &DoubleRightArrow;
+                    </a>
+                </p>
             </div>
         </div>
     </section>
@@ -259,7 +199,8 @@
                             <span class="big-round-num clickable">1</span><span class="clickable">You let us know</span>
                         </li>
                         <li id="second">
-                            <span class="big-round-num clickable">2</span><span class="clickable">We analyse & prepare</span>
+                            <span class="big-round-num clickable">2</span><span
+                                class="clickable">We analyse & prepare</span>
                         </li>
                         <li id="third">
                             <span class="big-round-num clickable">3</span><span class="clickable">We build the infrastructure</span>
@@ -285,7 +226,7 @@
                     <div class="portrait">
                         <div class="col-md-offset-1 col-md-5 col-xs-12">
                             <div class="portrait-img">
-                                <img src="<c:url value="/img/about_us/trump.jpg"/>"
+                                <img src="<c:url value="/resources/img/about_us/trump.jpg"/>"
                                      alt="Image of Rene Uhliar, one of the developers">
                             </div>
                         </div>
@@ -319,7 +260,8 @@
                         </div>
                         <div class="before col-md-6 col-xs-12">
                             <div class="portrait-img reverse">
-                                <img src="<c:url value="/img/about_us/stupid.jpg"/>" alt="Image of Maros Uhliar, head developer">
+                                <img src="<c:url value="/resources/img/about_us/stupid.jpg"/>"
+                                     alt="Image of Maros Uhliar, head developer">
                             </div>
                         </div>
                     </div>

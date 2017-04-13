@@ -44,7 +44,6 @@
                 vm.extra = vm.products.length % 3 != 0 ? 1 : 0;
             });
         }
-
     }
 
 })();

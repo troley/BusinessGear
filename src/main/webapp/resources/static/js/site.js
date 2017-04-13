@@ -57,7 +57,7 @@ function howItWorksItems(litem, appendable) {
         case '#third':
             src.fadeOut(140, function () {
                 //$(this).attr('src', '../static/img/tesla.jpg').fadeIn(140) // developer mode
-                $(this).attr('src', '../img/how_it_works/tesla.jpg').fadeIn(140); // production mode
+                $(this).attr('src', '/resources/img/how_it_works/tesla.jpg').fadeIn(140); // production mode
             });
             textPanel.css('height', '160px');
             appendable[2].fadeOut(140, function () {
@@ -68,7 +68,7 @@ function howItWorksItems(litem, appendable) {
         case '#fourth':
             src.fadeOut(140, function () {
                 //$(this).attr('src', '../static/img/hackerman.jpg').fadeIn(140) // developer mode
-                $(this).attr('src', '/img/how_it_works/hackerman.jpg').fadeIn(140) // production mode
+                $(this).attr('src', '/resources/img/how_it_works/hackerman.jpg').fadeIn(140) // production mode
             });
             textPanel.css('height', '230px');
             appendable[3].fadeOut(140, function () {

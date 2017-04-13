@@ -3,11 +3,70 @@
 <html>
 <head>
     <title>${product.name}</title>
+
+    <link rel="stylesheet" href="<c:url value="/resources/css/bootstrap/bootstrap.css"/>"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/font-awesome/css/font-awesome.min.css"/>"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/collection.css"/>"/>
+
 </head>
 <body>
 
+<header class="container-fluid">
+    <div class="brand">
+        <h1><a href="${pageContext.request.contextPath}/" style="color: white;">BusinessGear <sup><i
+                class="fa fa-copyright"></i></sup></a></h1>
+    </div>
+</header>
 
-
+<section class="main">
+    <div class="container body-container">
+        <div class="row">
+            <div class="breadcrumbs">
+                <a href="${pageContext.request.contextPath}/home">Home&ensp;<i class="fa fa-angle-double-right"></i></a>
+                <a href="${pageContext.request.contextPath}/products/collection">Collection&ensp;<i
+                        class="fa fa-angle-double-right"></i></a>
+                <span>${product.name}, ${product.id}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="back-to-collection">
+                <h2><a href="${pageContext.request.contextPath}/products/collection">&longleftarrow; Back to the
+                    collection</a></h2>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
+            <div class="detail-imgs-wrapper col-md-9">
+                <div class="small-detail-imgs">
+                    <div class="col-md-4">
+                        <div class="col-md-12">
+                            <img class="img-responsive" src="http://lorempixel.com/250/250"
+                                 alt="Small product detail image.">
+                        </div>
+                    </div>
+                </div>
+                <div class="big-detail-img">
+                    <div class="col-md-8">
+                        <img class="img-responsive" src="http://lorempixel.com/730/500" alt="Big product detail image.">
+                    </div>
+                </div>
+            </div>
+            <div class="detail-description-wrapper col-md-3">
+                <div class="description-header">
+                    <div class="col-md-12">
+                        <h2 style="margin: 0;">${product.name}, ${product.id}</h2>
+                    </div>
+                </div>
+                <div class="description-body">
+                    <div class="col-md-12">
+                        <p>
+                            ${product.description}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>

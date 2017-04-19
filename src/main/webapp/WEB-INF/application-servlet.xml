@@ -15,7 +15,6 @@
     <mvc:resources mapping="/resources/**" location="/resources/static/"/>
     <mvc:annotation-driven />
 
-
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".jsp"/>
@@ -35,6 +34,7 @@
             <list>
                 <value>com.renarcus.businessgear.model.Product</value>
                 <value>com.renarcus.businessgear.model.Category</value>
+                <value>com.renarcus.businessgear.model.Admin</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -45,20 +45,32 @@
         </property>
     </bean>
 
-    <bean id="productDao" class="com.renarcus.businessgear.dao.ProductDaoImpl">
+    <bean id="productDao" class="com.renarcus.businessgear.dao.product.ProductDaoImpl">
         <property name="sessionFactory" ref="hibernate5AnnotatedSessionFactory"/>
     </bean>
 
-    <bean id="productService" class="com.renarcus.businessgear.service.ProductServiceImpl">
+    <bean id="productService" class="com.renarcus.businessgear.service.product.ProductServiceImpl">
         <property name="productDao" ref="productDao"/>
     </bean>
 
-    <bean id="categoryDao" class="com.renarcus.businessgear.dao.CategoryDaoImpl">
+    <bean id="categoryDao" class="com.renarcus.businessgear.dao.category.CategoryDaoImpl">
         <property name="sessionFactory" ref="hibernate5AnnotatedSessionFactory" />
     </bean>
 
-    <bean id="categoryService" class="com.renarcus.businessgear.service.CategoryServiceImpl">
+    <bean id="categoryService" class="com.renarcus.businessgear.service.category.CategoryServiceImpl">
         <property name="categoryDao" ref="categoryDao"/>
+    </bean>
+
+    <bean id="adminDao" class="com.renarcus.businessgear.dao.admin.AdminDaoImpl">
+        <property name="sessionFactory" ref="hibernate5AnnotatedSessionFactory"/>
+    </bean>
+
+    <bean id="adminService" class="com.renarcus.businessgear.service.admin.AdminServiceImpl">
+        <property name="adminDao" ref="adminDao"/>
+    </bean>
+
+    <bean id="adminController" class="com.renarcus.businessgear.controller.AdminController">
+        <property name="adminService" ref="adminService" />
     </bean>
 
     <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">

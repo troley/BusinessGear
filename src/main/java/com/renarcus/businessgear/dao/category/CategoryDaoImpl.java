@@ -1,7 +1,6 @@
-package com.renarcus.businessgear.dao;
+package com.renarcus.businessgear.dao.category;
 
 import com.renarcus.businessgear.model.Category;
-import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,30 +21,29 @@ public class CategoryDaoImpl implements CategoryDao {
         this.sessionFactory = sf;
     }
 
-    public void addCategory(Category c) {
+    public void addItem(Category item) {
         Session session = this.sessionFactory.getCurrentSession();
-        session.persist(c);
+        session.persist(item);
     }
 
     @SuppressWarnings("unchecked")
-    public List<Category> listCategories() {
+    public List<Category> getAllItems() {
         Session session = this.sessionFactory.getCurrentSession();
         String query = "FROM " + Category.class.getSimpleName();
         return session.createQuery(query).list();
     }
 
-    public Category getCategoryById(int id) {
+    public Category getItemById(Integer id) {
         Session session = this.sessionFactory.getCurrentSession();
         return session.get(Category.class, id);
     }
 
-    public void updateCategory(Category c) {
+    public void updateItem(Category item) {
         Session session = this.sessionFactory.getCurrentSession();
-        session.update(c);
-
+        session.update(item);
     }
 
-    public void removeCategory(int id) {
+    public void removeItem(Integer id) {
         Session session = this.sessionFactory.getCurrentSession();
         Category category = session.get(Category.class, id);
 

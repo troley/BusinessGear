@@ -1,7 +1,7 @@
 package com.renarcus.businessgear.rest.controller;
 
 import com.renarcus.businessgear.model.Product;
-import com.renarcus.businessgear.service.ProductService;
+import com.renarcus.businessgear.service.product.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,33 +11,30 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-/**
- * Created by Troley on 10-4-2017
- */
-@RestController
+@RestController("/api/products")
 @RequestMapping("/api/products")
-public class ProductController {
+public class RestProductController {
 
     private ProductService productService;
 
     @Autowired
-    @Qualifier("productService")
+    @Qualifier(value = "productService")
     public void setProductService(ProductService productService) {
         this.productService = productService;
     }
 
     @GetMapping("/all")
     public List<Product> getAllProducts() {
-        return productService.listProducts();
+        return productService.getAllItems();
     }
 
     @GetMapping("/{id}")
     public Product getProductById(@PathVariable int id) {
-        return productService.getProductById(id);
+        return productService.getItemById(id);
     }
 
     @GetMapping("/category/{id}")
     public List<Product> getProductByCategory(@PathVariable int id) {
-        return productService.getProductsByCategoryId(id);
+        return productService.getItemsByCategoryId(id);
     }
 }

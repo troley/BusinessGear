@@ -65,14 +65,15 @@
                 </div>
             </div>
             <div class="detail-description-wrapper col-md-3">
-                <div class="product-detail-header">
+                <div class="product-detail-name">
                     <div class="col-md-12">
                         <h2 style="margin: -8px 0 0 0;">${product.name}, ${product.id}</h2>
                     </div>
                 </div>
-                <div class="product-detail-name">
+                <div class="product-detail-category">
                     <div class="col-md-12">
                         <p>
+                            Category: ${product.category.name}
                         </p>
                     </div>
                 </div>
@@ -85,8 +86,41 @@
                 </div>
             </div>
         </div>
+        <div class="push"></div>
     </div>
 </section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="no-list-style">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="no-list-style">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">The Team</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="no-list-style">
+                    <li><a href="#">Software Collection</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="<c:url value="/resources/js/jquery-3.1.1.min.js"/>"></script>
+<script src="<c:url value="/resources/js/angular.min.js"/>"></script>
+<script src="<c:url value="/resources/js/site.js"/>"></script>
+<script src="<c:url value="/resources/js/app.module.js"/>"></script>
+<script src="<c:url value="/resources/js/products.controller.js"/>"></script>
 
 </body>
 </html>

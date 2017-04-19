@@ -1,9 +1,8 @@
-package com.renarcus.businessgear.dao;
+package com.renarcus.businessgear.dao.product;
 
 import com.renarcus.businessgear.model.Product;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -22,40 +21,40 @@ public class ProductDaoImpl implements ProductDao {
         this.sessionFactory = sf;
     }
 
-    public void addProduct(Product p) {
+    public void addItem(Product item) {
         Session session = this.sessionFactory.getCurrentSession();
-        session.persist(p);
-    }
-
-    public void updateProduct(Product p) {
-        Session session = this.sessionFactory.getCurrentSession();
-        session.update(p);
+        session.persist(item);
     }
 
     @SuppressWarnings("unchecked")
-    public List<Product> listProducts() {
+    public List<Product> getAllItems() {
         Session session = this.sessionFactory.getCurrentSession();
         return session.createQuery("FROM " + Product.class.getSimpleName() + " p").list();
     }
 
-    public Product getProductById(Integer id) {
+    public Product getItemById(Integer id) {
         Session session = this.sessionFactory.getCurrentSession();
         return session.get(Product.class, id);
     }
 
-    @SuppressWarnings("unchecked")
-    public List<Product> getProductsByCategoryId(Integer id) {
+    public void updateItem(Product item) {
         Session session = this.sessionFactory.getCurrentSession();
-        String query = "FROM " + Product.class.getSimpleName() + " p WHERE category_id = :id";
-        return session.createQuery(query).setParameter("id", id).list();
+        session.update(item);
     }
 
-    public void removeProduct(Integer id) {
+    public void removeItem(Integer id) {
         Session session = this.sessionFactory.getCurrentSession();
         Product product = session.get(Product.class, id);
 
         if (product != null) {
             session.delete(product);
         }
+    }
+
+    @SuppressWarnings("unchecked")
+    public List<Product> getItemsByCategoryId(int id) {
+        Session session = this.sessionFactory.getCurrentSession();
+        String query = "FROM " + Product.class.getSimpleName() + " p WHERE category_id = :id";
+        return session.createQuery(query).setParameter("id", id).list();
     }
 }

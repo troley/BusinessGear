@@ -1,7 +1,5 @@
 package com.renarcus.businessgear.model;
 
-import com.renarcus.businessgear.misc.JsonParser;
-
 import javax.persistence.*;
 
 /**
@@ -23,7 +21,7 @@ public class Product {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "category_id", referencedColumnName = "category_id", nullable = false)
+    @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
     public int getId() {

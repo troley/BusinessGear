@@ -1,8 +1,8 @@
-package java.com.renarcus.businessgear.dao;
+package com.renarcus.businessgear.dao;
 
-import com.renarcus.businessgear.dao.ProductDao;
+import com.renarcus.businessgear.dao.product.ProductDao;
 import com.renarcus.businessgear.model.Product;
-import com.renarcus.businessgear.service.ProductServiceImpl;
+import com.renarcus.businessgear.service.product.ProductServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -37,7 +37,7 @@ public class ProductDaoImplTest {
     @Test
     public void getProductById() throws Exception {
 
-        Product newProduct = productService.getProductById(1);
+        Product newProduct = productService.getItemById(1);
 
         assertEquals(1, newProduct.getId());
     }

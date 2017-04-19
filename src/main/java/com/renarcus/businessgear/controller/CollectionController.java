@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Troley on 10-4-2017
  */
@@ -22,15 +25,18 @@ public class CollectionController {
     }
 
     @GetMapping("/detail/{productId}")
-    public ModelAndView getProductDetails(@PathVariable Integer productId) {
-        if (productId != 0) {
-            RestTemplate restTemplate = new RestTemplate();
-            String url = "http://localhost:8080/api/products/{productId}";
-            Product product = restTemplate.getForObject(url, Product.class, productId);
-            return new ModelAndView("detail", "product", product);
-        } else {
-            return new ModelAndView("collection");
-        }
+    public ModelAndView getProductDetails(@PathVariable int productId) {
+        RestTemplate restTemplate = new RestTemplate();
+        String productRestUrl = "http://localhost:8080/api/products/{productId}";
+        String categoryRestUrl = "http://localhost:8080/api/category/";
+        Product product = restTemplate.getForObject(productRestUrl, Product.class, productId);
+        categoryRestUrl += product.getCategory().getId();
+
+        Map<String, Object> models = new HashMap<String, Object>();
+        models.put("product", product);
+
+        return new ModelAndView("detail", models);
+
     }
 
 }

@@ -1,5 +1,6 @@
 package com.renarcus.businessgear.service;
 
+import com.renarcus.businessgear.dao.ProductDao;
 import com.renarcus.businessgear.model.Product;
 
 import java.util.List;

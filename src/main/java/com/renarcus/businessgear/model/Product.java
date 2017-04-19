@@ -22,8 +22,9 @@ public class Product {
 
     private String description;
 
-    @Column(name = "category_id")
-    private int categoryId;
+    @ManyToOne
+    @JoinColumn(name = "category_id", referencedColumnName = "category_id", nullable = false)
+    private Category category;
 
     public int getId() {
         return id;
@@ -57,16 +58,11 @@ public class Product {
         this.description = description;
     }
 
-    public int getCategoryId() {
-        return categoryId;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
-    }
-
-    @Override
-    public String toString() {
-        return JsonParser.getGson().toJson(this);
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

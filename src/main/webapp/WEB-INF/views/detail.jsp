@@ -36,27 +36,47 @@
         </div>
         <div class="row" style="margin-top: 30px;">
             <div class="detail-imgs-wrapper col-md-9">
-                <div class="small-detail-imgs">
+                <div class="aside-imgs">
                     <div class="col-md-4">
-                        <div class="col-md-12">
-                            <img class="img-responsive" src="http://lorempixel.com/250/250"
-                                 alt="Small product detail image.">
+                        <div class="first-detail-img">
+                            <div class="col-md-12">
+                                <img class="img-responsive" src="http://lorempixel.com/250/250"
+                                     alt="Small product detail image.">
+                            </div>
+                        </div>
+                        <div class="next-detail-img">
+                            <div class="col-md-12" style="margin-top: 30px;">
+                                <img class="img-responsive" src="<c:url value="/resources/img/product/${product.id}/manual_cash_machine.jpg"/>"
+                                     alt="Small product detail image.">
+                            </div>
+                        </div>
+                        <div class="next-detail-img">
+                            <div class="col-md-12" style="margin-top: 30px;">
+                                <img class="img-responsive" src="<c:url value="/resources/img/product/${product.id}/not_bieber_just_grass.jpg"/>"
+                                     alt="Small product detail image.">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="big-detail-img">
+                <div class="large-detail-img">
                     <div class="col-md-8">
                         <img class="img-responsive" src="http://lorempixel.com/730/500" alt="Big product detail image.">
                     </div>
                 </div>
             </div>
             <div class="detail-description-wrapper col-md-3">
-                <div class="description-header">
+                <div class="product-detail-header">
                     <div class="col-md-12">
-                        <h2 style="margin: 0;">${product.name}, ${product.id}</h2>
+                        <h2 style="margin: -8px 0 0 0;">${product.name}, ${product.id}</h2>
                     </div>
                 </div>
-                <div class="description-body">
+                <div class="product-detail-name">
+                    <div class="col-md-12">
+                        <p>
+                        </p>
+                    </div>
+                </div>
+                <div class="product-detail-body">
                     <div class="col-md-12">
                         <p>
                             ${product.description}

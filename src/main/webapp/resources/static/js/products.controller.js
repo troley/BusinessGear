@@ -28,7 +28,7 @@
         }
 
         function getAll() {
-            var url = '/api/products';
+            var url = '/api/products/all';
             var productsPromise = $http.get(url);
             productsPromise.then(function (response) {
                 vm.products = response.data;
@@ -37,7 +37,7 @@
         }
 
         function getFiltered(id) {
-            var url = '/api/products_category/' + id;
+            var url = '/api/products/category/' + id;
             var productsPromise = $http.get(url);
             productsPromise.then(function (response) {
                 vm.products = response.data;

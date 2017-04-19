@@ -31,7 +31,12 @@
     <bean id="hibernate5AnnotatedSessionFactory"
           class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="annotatedClasses" value="com.renarcus.businessgear.model.Product"/>
+        <property name="annotatedClasses">
+            <list>
+                <value>com.renarcus.businessgear.model.Product</value>
+                <value>com.renarcus.businessgear.model.Category</value>
+            </list>
+        </property>
         <property name="hibernateProperties">
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</prop>
@@ -46,6 +51,14 @@
 
     <bean id="productService" class="com.renarcus.businessgear.service.ProductServiceImpl">
         <property name="productDao" ref="productDao"/>
+    </bean>
+
+    <bean id="categoryDao" class="com.renarcus.businessgear.dao.CategoryDaoImpl">
+        <property name="sessionFactory" ref="hibernate5AnnotatedSessionFactory" />
+    </bean>
+
+    <bean id="categoryService" class="com.renarcus.businessgear.service.CategoryServiceImpl">
+        <property name="categoryDao" ref="categoryDao"/>
     </bean>
 
     <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">

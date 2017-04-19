@@ -290,16 +290,6 @@ footer a:hover {
     color: black;
 }
 
-.back-to-collection h2 {
-    font-size: 24px;
-    margin: 40px 0 0 15px;
-}
-
-.back-to-collection a,
-.back-to-collection a:hover {
-    font-family: 'Merriweather', serif;
-    color: #9c9b9b;
-}
 
 /* HOVER IMG IN SHOWCASE */
 @media (min-width: 991px) {

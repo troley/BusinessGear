@@ -30,3 +30,40 @@ header {
     border-color: black;
     background-color: black;
 }
+
+.back-to-collection h2 {
+    font-size: 24px;
+    margin: 40px 0 0 15px;
+}
+
+.back-to-collection a,
+.back-to-collection a:hover {
+    font-family: 'Merriweather', serif;
+    color: #9c9b9b;
+}
+
+.aside-imgs img {
+    width: 222.5px;
+    height: 222.5px;
+}
+
+.large-detail-img img {
+    height: 728px;
+}
+
+.next-detail-img {
+    margin-top: 30px;
+}
+
+/* MEDIA */
+
+@media (min-width: 991px) and ( max-width: 1200px) {
+    .aside-imgs img {
+        width: 172.5px;
+        height: 172.5px;
+    }
+
+    .large-detail-img img {
+        height: 579px;
+    }
+}

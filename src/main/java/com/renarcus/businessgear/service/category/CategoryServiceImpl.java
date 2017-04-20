@@ -17,7 +17,7 @@ public class CategoryServiceImpl implements CategoryService {
     private CategoryDao categoryDao;
 
     @Autowired
-    public void setCategoryDao(CategoryDao categoryDao) {
+    public CategoryServiceImpl(CategoryDao categoryDao) {
         this.categoryDao = categoryDao;
     }
 

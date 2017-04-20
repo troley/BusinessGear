@@ -5,7 +5,11 @@ import com.renarcus.businessgear.model.Category;
 import java.util.List;
 
 /**
- * Created by Troley on 19-4-2017
+ * Abstract boilerplate dao interface for easier
+ * use with new dao interfaces.
+ *
+ * @param <T> The return/parameter object.
+ * @param <E> The object for defining the Id parameter data type.
  */
 public interface AbstractDao<T, E> {
 

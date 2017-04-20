@@ -16,7 +16,7 @@ public class AdminServiceImpl implements AdminService {
     private AdminDao adminDao;
 
     @Autowired
-    public void setAdminDao(AdminDao adminDao) {
+    public AdminServiceImpl(AdminDao adminDao) {
         this.adminDao = adminDao;
     }
 

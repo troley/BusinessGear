@@ -17,22 +17,23 @@ public class AdminController {
     private AdminService adminService;
 
     @Autowired
-    public void setAdminService(AdminService adminService) {
+    public AdminController(AdminService adminService) {
         this.adminService = adminService;
     }
 
-    @GetMapping("/login")
+    @GetMapping()
     public ModelAndView getAdminLoginPage() {
-        return new ModelAndView("admin", "command", new Admin());
+        return new ModelAndView("admin/admin", "command", new Admin());
     }
 
-    @PostMapping("/login/verify")
+    @PostMapping("/login")
     public String getIt(@ModelAttribute("admin") Admin admin) {
         Admin verifiableAdmin = adminService.getItemById(admin.getUsername());
 
         if (verifiableAdmin != null) {
             if (verifiableAdmin.getPassword().equals(admin.getPassword())) {
                 // redirect to CRUD view
+                return "redirect:/crud/products";
             }
         }
 

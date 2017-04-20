@@ -9,8 +9,11 @@
         var vm = this;
 
         vm.products = [];
+        vm.singleProduct = null;
         vm.getAll = getAll;
         vm.getFiltered = getFiltered;
+        vm.getProductById = getProductById;
+
         vm.range = function (min, max, step) {
             step = step || 1;
             var input = [];
@@ -42,6 +45,14 @@
             productsPromise.then(function (response) {
                 vm.products = response.data;
                 vm.extra = vm.products.length % 3 != 0 ? 1 : 0;
+            });
+        }
+
+        function getProductById(id) {
+            var url = '/api/products/' + id;
+            var productsPromise = $http.get(url);
+            productsPromise.then(function (response) {
+                vm.products = response.data;
             });
         }
     }

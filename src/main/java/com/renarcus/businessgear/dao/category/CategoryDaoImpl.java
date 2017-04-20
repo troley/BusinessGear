@@ -1,5 +1,6 @@
 package com.renarcus.businessgear.dao.category;
 
+import com.renarcus.businessgear.dao.admin.AdminDaoImpl;
 import com.renarcus.businessgear.model.Category;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -17,7 +18,7 @@ public class CategoryDaoImpl implements CategoryDao {
     private SessionFactory sessionFactory;
 
     @Autowired
-    public void setSessionFactory(SessionFactory sf) {
+    public CategoryDaoImpl(SessionFactory sf) {
         this.sessionFactory = sf;
     }
 

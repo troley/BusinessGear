@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="j" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>${product.name}</title>
@@ -25,7 +26,7 @@
                 <a href="${pageContext.request.contextPath}/home">Home&ensp;<i class="fa fa-angle-double-right"></i></a>
                 <a href="${pageContext.request.contextPath}/products/collection">Collection&ensp;<i
                         class="fa fa-angle-double-right"></i></a>
-                <span>${product.name}, ${product.id}</span>
+                <span>${product.name}</span>
             </div>
         </div>
         <div class="row">
@@ -41,26 +42,34 @@
                         <div class="first-detail-img">
                             <div class="col-md-12">
                                 <img class="img-responsive" src="http://lorempixel.com/250/250"
-                                     alt="Small product detail image.">
+                                     alt="Small product detail image."
+                                     onerror="this.onerror=null; this.src='/resources/img/img404/imageNotFound.jpg'">
                             </div>
                         </div>
                         <div class="next-detail-img">
                             <div class="col-md-12" style="margin-top: 30px;">
-                                <img class="img-responsive" src="<c:url value="/resources/img/product/${product.id}/manual_cash_machine.jpg"/>"
-                                     alt="Small product detail image.">
+                                <img class="img-responsive"
+                                     src="<c:url value="/resources/img/product/${product.id}/manual_cash_machine.jpg"/>"
+                                     alt="Small product detail image."
+                                     onerror="this.onerror=null; this.src='/resources/img/img404/imageNotFound.jpg'">
+
                             </div>
                         </div>
                         <div class="next-detail-img">
                             <div class="col-md-12" style="margin-top: 30px;">
-                                <img class="img-responsive" src="<c:url value="/resources/img/product/${product.id}/not_bieber_just_grass.jpg"/>"
-                                     alt="Small product detail image.">
+                                <img class="img-responsive"
+                                     src="<c:url value="/resources/img/product/${product.id}/not_bieber_just_grass.jpg"/>"
+                                     alt="Small product detail image."
+                                     onerror="this.onerror=null; this.src='/resources/img/img404/imageNotFound.jpg'">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="large-detail-img">
                     <div class="col-md-8">
-                        <img class="img-responsive" src="http://lorempixel.com/730/500" alt="Big product detail image.">
+                        <img class="img-responsive" src="http://lorempixel.com/730/500"
+                             alt="Big product detail image."
+                             onerror="this.onerror=null; this.src='/resources/img/img404/imageNotFound.jpg'">
                     </div>
                 </div>
             </div>
@@ -115,12 +124,9 @@
     </div>
 </footer>
 
-
 <script src="<c:url value="/resources/js/jquery-3.1.1.min.js"/>"></script>
-<script src="<c:url value="/resources/js/angular.min.js"/>"></script>
-<script src="<c:url value="/resources/js/site.js"/>"></script>
-<script src="<c:url value="/resources/js/app.module.js"/>"></script>
-<script src="<c:url value="/resources/js/products.controller.js"/>"></script>
+<script src="<c:url value="/resources/js/on-img-error.js"/>"></script>
+
 
 </body>
 </html>

@@ -54,7 +54,7 @@
                         <div ng-repeat="product in vm.products.slice((n - 1) * 3, n * 3)">
                             <div class="col-md-4">
                                 <div class="panel">
-                                    <a href="${pageContext.request.contextPath}/products/detail/{{ product.id }}">
+                                    <a ng-href="/products/detail/{{ product.id }}">
                                         <div class="panel-image">
                                             <img class="img-responsive" src="http://lorempixel.com/270/211"
                                                  alt="Lorem Ipsum">
@@ -110,6 +110,7 @@
 <script src="<c:url value="/resources/js/site.js"/>"></script>
 <script src="<c:url value="/resources/js/app.module.js"/>"></script>
 <script src="<c:url value="/resources/js/products.controller.js"/>"></script>
+<script src="<c:url value="/resources/js/on-img-error.js"/>"></script>
 
 </body>
 </html>

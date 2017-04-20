@@ -19,7 +19,7 @@ public class CollectionController {
 
     @GetMapping("/collection")
     public String getCollection() {
-        return "collection";
+        return "collection/collection";
     }
 
     @GetMapping("/detail/{productId}")
@@ -30,7 +30,7 @@ public class CollectionController {
         ModelMap model = new ModelMap();
         model.put("product", product);
 
-        return new ModelAndView("detail", model);
+        return new ModelAndView("collection/detail", model);
     }
 
 }

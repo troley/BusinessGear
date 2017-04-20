@@ -21,12 +21,12 @@
     <div class="row">
         <div class="col-md-12" style="text-align: center;">
             <section>
-                <f:form action="${pageContext.request.contextPath}/admin/login/verify" method="POST">
+                <f:form action="${pageContext.request.contextPath}/admin/login" method="POST">
                     <h1>Log in</h1>
                     <hr />
                     <!--<div asp-validation-summary="All" class="text-danger"></div>-->
                     <div class="col-md-12 input-space">
-                        <f:input class="default-bg-field" path="username"  name="Username" placeholder="Username" />
+                        <f:input class="default-bg-field" path="username"  name="username" placeholder="Username" />
                         <br />
                         <span class="username-validation validation-text"></span>
                     </div>
@@ -69,13 +69,6 @@
         </div>
     </div>
 </footer>
-
-
-<script src="<c:url value="/resources/js/jquery-3.1.1.min.js"/>"></script>
-<script src="<c:url value="/resources/js/angular.min.js"/>"></script>
-<script src="<c:url value="/resources/js/site.js"/>"></script>
-<script src="<c:url value="/resources/js/app.module.js"/>"></script>
-<script src="<c:url value="/resources/js/products.controller.js"/>"></script>
 
 </body>
 </html>

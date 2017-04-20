@@ -8,17 +8,18 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <context:component-scan base-package="com.renarcus.businessgear" />
+    <context:component-scan base-package="com.renarcus.businessgear"/>
 
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
-    <mvc:resources mapping="/resources/**" location="/resources/static/"/>
-    <mvc:annotation-driven />
+    <mvc:annotation-driven/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
@@ -27,7 +28,7 @@
         <property name="password" value="root"/>
     </bean>
 
-    <bean id="hibernate5AnnotatedSessionFactory"
+    <bean id="sessionFactory"
           class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="annotatedClasses">
@@ -46,35 +47,35 @@
     </bean>
 
     <bean id="productDao" class="com.renarcus.businessgear.dao.product.ProductDaoImpl">
-        <property name="sessionFactory" ref="hibernate5AnnotatedSessionFactory"/>
+        <constructor-arg name="sf" ref="sessionFactory"/>
     </bean>
 
     <bean id="productService" class="com.renarcus.businessgear.service.product.ProductServiceImpl">
-        <property name="productDao" ref="productDao"/>
+        <constructor-arg name="productDao" ref="productDao"/>
     </bean>
 
     <bean id="categoryDao" class="com.renarcus.businessgear.dao.category.CategoryDaoImpl">
-        <property name="sessionFactory" ref="hibernate5AnnotatedSessionFactory" />
+        <constructor-arg name="sf" ref="sessionFactory"/>
     </bean>
 
     <bean id="categoryService" class="com.renarcus.businessgear.service.category.CategoryServiceImpl">
-        <property name="categoryDao" ref="categoryDao"/>
+        <constructor-arg name="categoryDao" ref="categoryDao"/>
     </bean>
 
     <bean id="adminDao" class="com.renarcus.businessgear.dao.admin.AdminDaoImpl">
-        <property name="sessionFactory" ref="hibernate5AnnotatedSessionFactory"/>
+        <constructor-arg name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
     <bean id="adminService" class="com.renarcus.businessgear.service.admin.AdminServiceImpl">
-        <property name="adminDao" ref="adminDao"/>
+        <constructor-arg name="adminDao" ref="adminDao"/>
     </bean>
 
     <bean id="adminController" class="com.renarcus.businessgear.controller.AdminController">
-        <property name="adminService" ref="adminService" />
+        <constructor-arg name="adminService" ref="adminService"/>
     </bean>
 
     <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
-        <property name="sessionFactory" ref="hibernate5AnnotatedSessionFactory"/>
+        <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
 </beans>

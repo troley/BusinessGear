@@ -55,6 +55,38 @@ header {
     margin-top: 30px;
 }
 
+.detail-description-wrapper p {
+    margin-bottom: 0;
+}
+
+.detail-description-wrapper,
+.potential-customer {
+    font-family: 'Alegreya', serif;
+    font-size: 16px;
+}
+
+.detail-description-wrapper .product-detail-name {
+    font-size: 20px;
+}
+
+span.detail-text-color {
+    color: #c12e2a;
+}
+
+.potential-customer .button-interested input {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.potential-customer .button-interested input:hover {
+    background-color: #2f3438;
+    color: #bf0000;
+}
+
 /* MEDIA */
 
 @media (min-width: 991px) and ( max-width: 1200px) {

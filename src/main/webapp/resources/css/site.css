@@ -157,10 +157,23 @@ header {
     margin-left: 5.5%;
 }
 
-.panel,
-.showcase-panel {
+.panel {
     font-family: 'Slabo 27px', serif;
     width: 270px;
+}
+
+.gray-wrapper-row.index-page {
+    height: 360px;
+}
+
+.showcase .panel {
+    position: absolute;
+}
+
+.showcase .panels-wrapper .panel img {
+    width: 270px;
+    height: 211px;
+    transition: height .8s, width .8s;
 }
 
 .panel-title {
@@ -168,6 +181,12 @@ header {
     padding: 10px 7px 10px 0;
     text-align: center;
     font-size: 19px;
+}
+
+.panel-image-title {
+    width: 270px;
+    top: 210px;
+
 }
 
 .panel-image-title h3 {
@@ -185,7 +204,7 @@ header {
     font-weight: 400;
     font-size: 18px;
     text-align: right;
-    margin: 120px 20px 0 0;
+    margin: 280px 20px 0 0;
 }
 
 .push {
@@ -286,13 +305,20 @@ footer a:hover {
     color: black;
 }
 
-
 /* HOVER IMG IN SHOWCASE */
 @media (min-width: 991px) {
 
+    * {
+        transition: all .8s;
+    }
+
+    .showcase .panel:hover {
+        width: 320px;
+    }
+
     .showcase .panel:hover img {
-        position: absolute;
         border: 3px solid rgba(154, 151, 150, 0.15);
+        position: absolute;
         border-bottom: none;
         border-radius: 9px 9px 0 0;
         width: 320px;
@@ -331,6 +357,14 @@ footer a:hover {
 
     .panel {
         margin: 0 auto 25px auto;
+    }
+
+    .showcase .panel {
+        position: relative;
+    }
+
+    .gray-wrapper-row.index-page {
+        height: auto;
     }
 
     .expectations .panel {

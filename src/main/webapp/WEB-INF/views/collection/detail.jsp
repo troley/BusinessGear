@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="<c:url value="/resources/css/bootstrap/bootstrap.css"/>"/>
     <link rel="stylesheet" href="<c:url value="/resources/css/font-awesome/css/font-awesome.min.css"/>"/>
     <link rel="stylesheet" href="<c:url value="/resources/css/collection.css"/>"/>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700,900" rel="stylesheet">
 
 </head>
 <body>
@@ -76,21 +77,41 @@
             <div class="detail-description-wrapper col-md-3">
                 <div class="product-detail-name">
                     <div class="col-md-12">
-                        <h2 style="margin: -8px 0 0 0;">${product.name}, ${product.id}</h2>
+                        <h2 style="margin: -8px 0 0 0;">${product.name}</h2>
                     </div>
                 </div>
                 <div class="product-detail-category">
                     <div class="col-md-12">
                         <p>
-                            Category: ${product.category.name}
+                            Category: <span class="detail-text-color">${product.category.name}</span>
                         </p>
                     </div>
                 </div>
                 <div class="product-detail-body">
                     <div class="col-md-12">
                         <p>
-                            ${product.description}
+                            Description: <span class="detail-text-color">${product.description}</span>
                         </p>
+                    </div>
+                </div>
+            </div>
+            <div class="potential-customer col-md-3" style="margin-top: 60px;">
+                <div class="detail-interested">
+                    <div class="col-md-12">
+                        <p>
+                            Are you interested in this product?
+                            Please, if you are, don't
+                            hesitate and let us know! We guarantee
+                            that you won't be disappointed. You
+                            can change your mind within 60 days.
+                            <br>
+                            <b><u>Money back, no questions asked.</u></b>
+                        </p>
+                    </div>
+                </div>
+                <div class="button-interested" style="text-align: center;">
+                    <div class="col-md-12">
+                        <input type="button" value="Let us know">
                     </div>
                 </div>
             </div>

@@ -2,96 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="980a4b26-6284-4fb7-869d-f457922364e6" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_7_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_7_RELEASE.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/admin.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/collection.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/collection/collection.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/detail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/collection/detail.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home/index.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/admin.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/admin.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/bootstrap/bootstrap-theme.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap/bootstrap-theme.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/bootstrap/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap/bootstrap-theme.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/bootstrap/bootstrap.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/bootstrap/bootstrap.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap/bootstrap.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/collection.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/collection.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/HELP-US-OUT.txt" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/HELP-US-OUT.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/css/font-awesome.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/css/font-awesome.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/fonts/FontAwesome.otf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/fonts/fontawesome-webfont.woff2" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/less/animated.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/animated.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/bordered-pulled.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/less/core.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/core.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/less/fixed-width.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/fixed-width.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/font-awesome.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/less/icons.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/icons.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/less/larger.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/larger.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/less/list.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/list.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/less/mixins.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/mixins.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/less/path.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/path.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/rotated-flipped.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/less/screen-reader.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/screen-reader.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/less/stacked.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/stacked.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/less/variables.less" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/less/variables.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/scss/_animated.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_animated.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_bordered-pulled.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/scss/_core.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_core.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_fixed-width.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/scss/_icons.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_icons.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/scss/_larger.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_larger.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/scss/_list.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_list.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_mixins.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/scss/_path.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_path.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_rotated-flipped.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/scss/_screen-reader.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_screen-reader.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/scss/_stacked.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_stacked.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/scss/_variables.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/_variables.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/font-awesome/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/font-awesome/scss/font-awesome.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/site.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/site.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/css/site.min.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/site.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/img/about_us/stupid.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/about_us/stupid.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/img/about_us/trump.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/about_us/trump.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/img/how_it_works/hackerman.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/how_it_works/hackerman.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/img/how_it_works/tesla.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/how_it_works/tesla.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/img/product/3/manual_cash_machine.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/product/3/manual_cash_machine.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/img/product/3/not_bieber_just_grass.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/product/3/not_bieber_just_grass.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/js/angular.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/angular.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/js/app.module.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/app.module.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/js/jquery-3.1.1.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/jquery-3.1.1.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/js/products.controller.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/products.controller.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/js/site.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/site.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/static/js/site.min.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/site.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/businessgear_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/businessgear_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/businessgear.iml" afterPath="$PROJECT_DIR$/businessgear.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/controller/AdminController.java" afterPath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/controller/AdminController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/controller/CollectionController.java" afterPath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/controller/CollectionController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/controller/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/dao/AbstractDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/dao/AbstractDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/dao/admin/AdminDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/dao/admin/AdminDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/dao/category/CategoryDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/dao/category/CategoryDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/dao/product/ProductDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/dao/product/ProductDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/rest/controller/RestProductController.java" afterPath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/rest/controller/RestProductController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/service/admin/AdminServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/service/admin/AdminServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/service/category/CategoryServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/service/category/CategoryServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/service/product/ProductServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/service/product/ProductServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/application-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/application-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/collection/detail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/collection/detail.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/collection.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/collection.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/site.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/site.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/html/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/resources/html/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -114,16 +29,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application-servlet.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/application-servlet.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RestProductController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/rest/controller/RestProductController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -156,8 +61,28 @@
       <file leaf-file-name="detail.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/collection/detail.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="125" column="0" lean-forward="true" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+            <state relative-caret-position="170">
+              <caret line="10" column="76" lean-forward="false" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="collection.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/collection.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1062">
+              <caret line="77" column="17" lean-forward="true" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/site.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="321" column="28" lean-forward="true" selection-start-line="321" selection-start-column="28" selection-end-line="321" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -176,28 +101,18 @@
       <file leaf-file-name="collection.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/collection/collection.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+            <state relative-caret-position="197">
+              <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="94" lean-forward="true" selection-start-line="14" selection-start-column="94" selection-end-line="14" selection-end-column="94" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="299" column="57" lean-forward="true" selection-start-line="299" selection-start-column="57" selection-end-line="299" selection-end-column="57" />
+            <state relative-caret-position="282">
+              <caret line="108" column="18" lean-forward="true" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -241,6 +156,9 @@
       <find>beginTran</find>
       <find>resources</find>
       <find>panel</find>
+      <find>showcase-panel</find>
+      <find>panel-image</find>
+      <find>showcase</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -254,7 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/dao/ProductDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/service/ProductServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/dao/AdminDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/dao/CategoryDao.java" />
@@ -298,13 +215,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/controller/HomeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/rest/controller/RestProductController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/products.controller.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/site.css" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/collection/detail.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/on-img-error.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/collection/collection.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/html/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/collection.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/collection/detail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/html/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/site.css" />
       </list>
     </option>
   </component>
@@ -1692,7 +1610,7 @@
       <workItem from="1492601153637" duration="7607000" />
       <workItem from="1492609747839" duration="1609000" />
       <workItem from="1492611383705" duration="30332000" />
-      <workItem from="1492685046431" duration="18715000" />
+      <workItem from="1492685046431" duration="28810000" />
     </task>
     <servers />
   </component>
@@ -1708,7 +1626,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188878000" />
+    <option name="totallyTimeSpent" value="198973000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1775,7 +1693,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/misc/JsonParser.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.2.9.Final/hibernate-core-5.2.9.Final.jar!/org/hibernate/Session.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1830,14 +1747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/collection.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2082,14 +1991,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="166" column="28" lean-forward="false" selection-start-line="166" selection-start-column="28" selection-end-line="166" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/application-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -2114,6 +2015,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/admin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="57" lean-forward="false" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysql_businessgear.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/controller/ProductCrudController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="94" lean-forward="true" selection-start-line="14" selection-start-column="94" selection-end-line="14" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/collection/detail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="76" lean-forward="false" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/collection.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1062">
+          <caret line="77" column="17" lean-forward="true" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/on-img-error.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/rest/controller/RestProductController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -2131,61 +2091,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/renarcus/businessgear/controller/ProductCrudController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding>
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/admin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="57" lean-forward="false" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/collection/collection.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/on-img-error.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/collection/detail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="125" column="0" lean-forward="true" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="94" lean-forward="true" selection-start-line="14" selection-start-column="94" selection-end-line="14" selection-end-column="94" />
+        <state relative-caret-position="197">
+          <caret line="34" column="28" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="299" column="57" lean-forward="true" selection-start-line="299" selection-start-column="57" selection-end-line="299" selection-end-column="57" />
+        <state relative-caret-position="282">
+          <caret line="108" column="18" lean-forward="true" selection-start-line="108" selection-start-column="18" selection-end-line="108" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/site.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="321" column="28" lean-forward="true" selection-start-line="321" selection-start-column="28" selection-end-line="321" selection-end-column="28" />
           <folding />
         </state>
       </provider>

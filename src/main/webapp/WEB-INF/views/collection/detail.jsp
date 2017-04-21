@@ -36,7 +36,7 @@
                     collection</a></h2>
             </div>
         </div>
-        <div class="row" style="margin-top: 30px;">
+        <div class="row main-detail-row">
             <div class="detail-imgs-wrapper col-md-9">
                 <div class="aside-imgs">
                     <div class="col-md-4">
@@ -95,7 +95,7 @@
                     </div>
                 </div>
             </div>
-            <div class="potential-customer col-md-3" style="margin-top: 60px;">
+            <div class="potential-customer col-md-3">
                 <div class="detail-interested">
                     <div class="col-md-12">
                         <p>
@@ -147,6 +147,7 @@
 
 <script src="<c:url value="/resources/js/jquery-3.1.1.min.js"/>"></script>
 <script src="<c:url value="/resources/js/on-img-error.js"/>"></script>
+<script src="<c:url value="/resources/js/word-adjustor.js"/>"></script>
 
 
 </body>

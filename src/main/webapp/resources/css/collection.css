@@ -42,6 +42,11 @@ header {
     color: #9c9b9b;
 }
 
+.main-detail-row {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
 .aside-imgs img {
     width: 222.5px;
     height: 222.5px;
@@ -73,6 +78,10 @@ span.detail-text-color {
     color: #c12e2a;
 }
 
+.potential-customer {
+    margin-top: 25px;
+}
+
 .potential-customer .button-interested input {
     width: 100%;
     height: 45px;
@@ -80,6 +89,7 @@ span.detail-text-color {
     border-radius: 6px;
     margin-top: 20px;
     font-size: 22px;
+    transition: 0.8s;
 }
 
 .potential-customer .button-interested input:hover {

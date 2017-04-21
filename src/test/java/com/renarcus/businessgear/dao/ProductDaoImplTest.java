@@ -33,12 +33,12 @@ public class ProductDaoImplTest {
 
         mockMvc = MockMvcBuilders.standaloneSetup(productService).build();
     }
-
+/*
     @Test
     public void getProductById() throws Exception {
 
         Product newProduct = productService.getItemById(1);
 
         assertEquals(1, newProduct.getId());
-    }
+    }*/
 }

@@ -28,35 +28,35 @@
         </div>
         <div class="col-md-12">
             <f:form action="/crud/products/create" method="POST">
-                <div class="col-md-12">
-                    <div class="col-md-5">
+                <div class="col-md-12 col-xs-12">
+                    <div class="col-md-5 col-xs-3">
                         <f:label class="crud-label float-right" path="name" for="name">Product Name:</f:label>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-xs-9">
                         <f:input class="default-crud-field float-left" type="text" name="name" path="name"/>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="col-md-5">
+                <div class="col-md-12 col-xs-12">
+                    <div class="col-md-5 col-xs-3">
                         <f:label class="crud-label float-right" path="name" for="name">Product Price:</f:label>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-xs-9">
                         <f:input class="default-crud-field float-left" type="money" name="name" path="price"/>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="col-md-5">
+                <div class="col-md-12 col-xs-12">
+                    <div class="col-md-5 col-xs-3">
                         <f:label class="crud-label float-right" path="name" for="name">Product Description:</f:label>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-xs-9">
                         <f:input class="default-crud-field float-left" type="text" name="name" path="description"/>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="col-md-5">
+                <div class="col-md-12 col-xs-12">
+                    <div class="col-md-5 col-xs-3">
                         <f:label class="crud-label float-right" path="name" for="name">Product Category:</f:label>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-xs-9">
                         <f:select class="default-crud-field float-left" type="text" name="name" path="category">
                             <j:forEach var="category" items="${categories}">
                                 <option value="${category.name}">${category.name}</option>

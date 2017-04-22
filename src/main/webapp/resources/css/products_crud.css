@@ -82,3 +82,10 @@ table {
     margin-bottom: 10px;
 }
 
+/* MEDIA */
+
+@media (max-width: 991px) {
+    .default-crud-field {
+        width: 100%;
+    }
+}

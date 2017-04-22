@@ -2,6 +2,7 @@ package com.renarcus.businessgear.model;
 
 import javax.persistence.*;
 
+
 /**
  * Created by Troley on 10-4-2017
  */

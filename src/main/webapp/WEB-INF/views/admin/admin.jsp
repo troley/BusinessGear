@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
+
 <html>
 <head>
     <title>Admin</title>
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="<c:url value="/resources/css/font-awesome/css/font-awesome.min.css"/>"/>
     <link rel="stylesheet" href="<c:url value="/resources/css/admin.css"/>"/>
 </head>
+
 <body>
 
 <header class="container-fluid">
@@ -23,20 +25,20 @@
             <section>
                 <f:form action="${pageContext.request.contextPath}/admin/login" method="POST">
                     <h1>Log in</h1>
-                    <hr />
+                    <hr/>
                     <!--<div asp-validation-summary="All" class="text-danger"></div>-->
                     <div class="col-md-12 input-space">
-                        <f:input class="default-bg-field" path="username"  name="username" placeholder="Username" />
-                        <br />
+                        <f:input class="default-bg-field" path="username" name="username" placeholder="Username"/>
+                        <br/>
                         <span class="username-validation validation-text"></span>
                     </div>
                     <div class="col-md-12 input-space">
-                        <f:input class="default-bg-field" type="password" path="password" placeholder="Password" />
-                        <br />
+                        <f:input class="default-bg-field" type="password" path="password" placeholder="Password"/>
+                        <br/>
                         <span class="pass-validation validation-text"></span>
                     </div>
                     <div class="col-md-12 input-space">
-                        <input id="logInSubmit" type="submit" value="Log in" />
+                        <input id="logInSubmit" type="submit" value="Log in"/>
                     </div>
                 </f:form>
             </section>

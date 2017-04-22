@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="j" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <title>${product.name}</title>
@@ -109,10 +109,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="button-interested" style="text-align: center;">
-                    <div class="col-md-12">
-                        <input type="button" value="Let us know">
-                    </div>
+                <div class="col-md-12" style="text-align: center;">
+                    <input class="default-dark-button" type="button" value="Let us know">
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
+
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="<c:url value="/resources/css/collection.css"/>"/>
     <link href="https://fonts.googleapis.com/css?family=Alegreya:400,700,700i|Inknut+Antiqua:600|Slabo+27px"
           rel="stylesheet"/>
+
 </head>
 <body>
 
@@ -24,7 +26,8 @@
             <div class="col-md-12 text-center">
                 <div class="filter-collection">
                     <input ng-click="vm.getAll()" class="filter-button" type="button" value="All">
-                    <input ng-click="vm.getFiltered(1)" class="filter-button" type="button" value="Administration (9)">
+                    <input ng-click="vm.getFiltered(1)" class="filter-button" type="button"
+                           value="Administration (9)">
                     <input ng-click="vm.getFiltered(4)" class="filter-button" type="button" value="Hardware (4)">
                     <input ng-click="vm.getFiltered(3)" class="filter-button" type="button" value="Management (12)">
                     <input ng-click="vm.getFiltered(2)" class="filter-button" type="button" value="Development (6)">
@@ -36,7 +39,8 @@
         <div class="container body-container">
             <div class="row">
                 <div class="breadcrumbs">
-                    <a href="${pageContext.request.contextPath}/home">Home&ensp;<i class="fa fa-angle-double-right"></i></a>
+                    <a href="${pageContext.request.contextPath}/home">Home&ensp;<i
+                            class="fa fa-angle-double-right"></i></a>
                     <span>Collection</span>
                 </div>
             </div>

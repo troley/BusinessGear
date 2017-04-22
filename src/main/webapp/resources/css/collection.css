@@ -82,21 +82,6 @@ span.detail-text-color {
     margin-top: 25px;
 }
 
-.potential-customer .button-interested input {
-    width: 100%;
-    height: 45px;
-    border: none;
-    border-radius: 6px;
-    margin-top: 20px;
-    font-size: 22px;
-    transition: 0.8s;
-}
-
-.potential-customer .button-interested input:hover {
-    background-color: #2f3438;
-    color: #bf0000;
-}
-
 /* MEDIA */
 
 @media (min-width: 991px) and ( max-width: 1200px) {

@@ -5,7 +5,10 @@ import com.renarcus.businessgear.model.Category;
 import java.beans.PropertyEditorSupport;
 
 /**
- * Created by Troley on 23-4-2017
+ * Converts the Id of Category from (String) text to Integer
+ * when posting a form which contains Category as a foreign key.
+ * If this is not done, then the BindingResult sees Category as null
+ * which throws an error.
  */
 public class CategoryPropertyEditor extends PropertyEditorSupport {
 

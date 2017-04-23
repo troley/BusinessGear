@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="j" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Create product</title>
@@ -27,45 +26,49 @@
             </div>
         </div>
         <div class="col-md-12">
-            <f:form action="/crud/products/create" method="POST">
+            <f:form action="/crud/products/create" modelAttribute="command" method="POST">
+                <f:hidden path="id"/>
                 <div class="col-md-12 col-xs-12">
                     <div class="col-md-5 col-xs-3">
                         <f:label class="crud-label float-right" path="name" for="name">Product Name:</f:label>
                     </div>
                     <div class="col-md-7 col-xs-9">
-                        <f:input class="default-crud-field float-left" type="text" name="name" path="name"/>
+                        <f:input class="default-crud-field float-left" type="text" path="name"/>
                     </div>
                 </div>
                 <div class="col-md-12 col-xs-12">
                     <div class="col-md-5 col-xs-3">
-                        <f:label class="crud-label float-right" path="name" for="name">Product Price:</f:label>
+                        <f:label class="crud-label float-right" path="price" for="price">Product Price:</f:label>
                     </div>
                     <div class="col-md-7 col-xs-9">
-                        <f:input class="default-crud-field float-left" type="money" name="name" path="price"/>
+                        <f:input class="default-crud-field float-left" type="text" path="price"/>
                     </div>
                 </div>
                 <div class="col-md-12 col-xs-12">
                     <div class="col-md-5 col-xs-3">
-                        <f:label class="crud-label float-right" path="name" for="name">Product Description:</f:label>
+                        <f:label class="crud-label float-right" path="description" for="description">Product Description:</f:label>
                     </div>
                     <div class="col-md-7 col-xs-9">
-                        <f:input class="default-crud-field float-left" type="text" name="name" path="description"/>
+                        <f:input class="default-crud-field float-left" type="text" path="description"/>
                     </div>
                 </div>
                 <div class="col-md-12 col-xs-12">
                     <div class="col-md-5 col-xs-3">
-                        <f:label class="crud-label float-right" path="name" for="name">Product Category:</f:label>
+                        <f:label class="crud-label float-right" path="category" for="category">Product Category:</f:label>
                     </div>
                     <div class="col-md-7 col-xs-9">
-                        <f:select class="default-crud-field float-left" type="text" name="name" path="category">
-                            <j:forEach var="category" items="${categories}">
-                                <option value="${category.name}">${category.name}</option>
-                            </j:forEach>
+                        <f:select class="default-crud-field float-left" type="text" path="category">
+                            <f:option value="EMPTY">-- SELECT OPTION --</f:option>
+                            <c:forEach var="category" items="${categories}">
+                                <f:option value="${category.id}">${category.name}</f:option>
+                            </c:forEach>
                         </f:select>
                     </div>
                 </div>
+                <div class="col-md-12 col-xs-12">
+                    <input class="default-dark-button" type="submit" value="Create product"/>
+                </div>
             </f:form>
-
         </div>
     </div>
 </div>

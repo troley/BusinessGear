@@ -1,6 +1,10 @@
 package com.renarcus.businessgear.model;
 
+import com.renarcus.businessgear.model.validator.Money;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 
 /**
@@ -12,15 +16,21 @@ public class Product {
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @NotNull
+    @Size(min=2)
     private String name;
 
-    private double price;
+    @NotNull
+    @Money
+    private String price;
 
+    @Size(max=255)
     private String description;
 
+    @NotNull
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
@@ -41,11 +51,11 @@ public class Product {
         this.name = name;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 

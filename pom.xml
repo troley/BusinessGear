@@ -21,6 +21,8 @@
         <javax.validation.version>1.1.0.Final</javax.validation.version>
         <hibernate.validator.version>5.4.1.Final</hibernate.validator.version>
         <log4j.version>2.8.2</log4j.version>
+        <javax-servlet.version>3.1.0</javax-servlet.version>
+        <springframework-security.version>4.1.4.RELEASE</springframework-security.version>
     </properties>
 
     <dependencies>
@@ -45,6 +47,16 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
             <version>${springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${springframework-security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${springframework-security.version}</version>
         </dependency>
         
         <!-- HIBERNATE -->
@@ -101,6 +113,13 @@
             <version>${jstl.version}</version>
         </dependency>
 
+        <!-- SERVLET -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${javax-servlet.version}</version>
+        </dependency>
+
         <!-- TEST -->
         <dependency>
             <groupId>junit</groupId>
@@ -119,12 +138,7 @@
             <artifactId>spring-test</artifactId>
             <version>${springframework.version}</version>
         </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
-            <scope>test</scope>
-        </dependency>
+
 
     </dependencies>
 

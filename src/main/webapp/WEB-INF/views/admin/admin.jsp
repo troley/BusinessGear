@@ -23,12 +23,12 @@
     <div class="row">
         <div class="col-md-12" style="text-align: center;">
             <section>
-                <f:form action="${pageContext.request.contextPath}/admin/login" method="POST">
+                <f:form action="${pageContext.request.contextPath}/login" method="POST">
                     <h1>Log in</h1>
                     <hr/>
                     <!--<div asp-validation-summary="All" class="text-danger"></div>-->
                     <div class="col-md-12 input-space">
-                        <f:input class="default-bg-field" path="username" name="username" placeholder="Username"/>
+                        <f:input class="default-bg-field" path="username" placeholder="Username"/>
                         <br/>
                         <span class="username-validation validation-text"></span>
                     </div>

@@ -1,7 +1,6 @@
 package com.renarcus.businessgear.controller;
 
-import com.renarcus.businessgear.exception.PageNotFoundException;
-import com.renarcus.businessgear.exception.ProductNotFoundException;
+import com.renarcus.businessgear.exception.ResourceNotFoundException;
 import com.renarcus.businessgear.model.Category;
 import com.renarcus.businessgear.model.Product;
 import com.renarcus.businessgear.model.PropertyEditor.CategoryPropertyEditor;
@@ -10,13 +9,14 @@ import com.renarcus.businessgear.service.product.ProductService;
 import org.hibernate.annotations.common.util.impl.LoggerFactory;
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -32,18 +32,29 @@ public class ProductCrudController {
     private ProductService productService;
 
     @Autowired
+    private HttpSession session;
+
+    @Autowired
     public ProductCrudController(CategoryService categoryService, ProductService productService) {
         this.categoryService = categoryService;
         this.productService = productService;
     }
 
+    @ExceptionHandler(ResourceNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public String handleResourceNotFoundException() {
+        return "redirect:error/notfound";
+    }
+
     @GetMapping()
     public String productsCrudPage() {
+        session.setMaxInactiveInterval(60 * 5); // set a 5 minutes session for logged in admin
         return "crud/product/products";
     }
 
     @GetMapping("/create")
     public String productCreationPage(Model model) {
+        session.setMaxInactiveInterval(60 * 5);
         List<Category> categories = categoryService.getAllItems();
         model.addAttribute("command", new Product());
         model.addAttribute("categories", categories);
@@ -76,13 +87,14 @@ public class ProductCrudController {
     public String showProductDetails(@PathVariable Integer id, Model model) {
 
         if (id == null)
-            throw new PageNotFoundException();
+            throw new ResourceNotFoundException();
 
         Product product = productService.getItemById(id);
 
         if (product == null)
-            throw new ProductNotFoundException();
+            throw new ResourceNotFoundException();
 
+        session.setMaxInactiveInterval(60 * 5);
         Category category = categoryService.getItemById(product.getCategory().getId());
 
         model.addAttribute("category", category);

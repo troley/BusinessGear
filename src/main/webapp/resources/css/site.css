@@ -184,6 +184,7 @@ header {
 
 .showcase .panel {
     position: absolute;
+    transition: width .8s;
 }
 
 .showcase .panels-wrapper .panel img {

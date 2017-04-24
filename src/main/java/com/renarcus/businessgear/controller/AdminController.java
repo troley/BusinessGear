@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
@@ -27,7 +30,7 @@ public class AdminController {
     }
 
     @PostMapping("/login")
-    public String getIt(@ModelAttribute("admin") Admin admin) {
+    public String getIt(@ModelAttribute("admin") Admin admin, HttpServletRequest request) {
         Admin verifiableAdmin = adminService.getItemById(admin.getUsername());
 
         if (verifiableAdmin != null) {
@@ -37,6 +40,6 @@ public class AdminController {
             }
         }
 
-        return null;
+        return "redirect:/admin";
     }
 }

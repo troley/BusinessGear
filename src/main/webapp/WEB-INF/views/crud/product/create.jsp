@@ -71,16 +71,15 @@
                 </div>
             </f:form>
         </div>
+        <div class="col-xs-12" style="margin-top: 20px;">
+            <a class="default-a" href="/crud/products">&longleftarrow; Back to products overview</a>
+        </div>
     </div>
 </div>
 
 <footer></footer>
 
-<script src="<c:url value="/resources/js/angular.min.js"/>"></script>
-<script src="<c:url value="/resources/js/app.module.js"/>"></script>
-<script src="<c:url value="/resources/js/products.controller.js"/>"></script>
 <script src="<c:url value="/resources/js/jquery-3.1.1.min.js"/>"></script>
-<script src="<c:url value="/resources/js/item-activator.js"/>"></script>
 
 </body>
 </html>

@@ -21,7 +21,7 @@
 <div class="container body-container">
     <div class="row">
         <div class="col-md-12">
-            <h1 style="text-align: center;">Create Product</h1>
+            <h1 style="text-align: center;">Product Details</h1>
         </div>
         <div class="col-md-12">
             <f:form action="/crud/products/details/update" method="POST">
@@ -73,6 +73,10 @@
         </div>
     </div>
 </div>
+
+<footer></footer>
+
+<script src="<c:url value="/resources/js/jquery-3.1.1.min.js"/>"></script>
 
 </body>
 </html>

@@ -15,6 +15,7 @@
         <form-login login-page="/admin"
                     username-parameter="username"
                     password-parameter="password"
+                    authentication-success-forward-url="/admin/login"
                     authentication-failure-url="/admin"/>
     </http>
 

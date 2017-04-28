@@ -1,5 +1,6 @@
 package com.renarcus.businessgear.controller;
 
+import com.renarcus.businessgear.exception.BadRequestException;
 import com.renarcus.businessgear.exception.ResourceNotFoundException;
 import com.renarcus.businessgear.model.Category;
 import com.renarcus.businessgear.model.Product;
@@ -16,6 +17,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.naming.Binding;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -44,6 +46,12 @@ public class ProductCrudController {
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public String handleResourceNotFoundException() {
         return "redirect:error/notfound";
+    }
+
+    @ExceptionHandler(BadRequestException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public String handleBadRequestExpception() {
+        return "redirect:error/badrequest";
     }
 
     @GetMapping()
@@ -95,9 +103,9 @@ public class ProductCrudController {
             throw new ResourceNotFoundException();
 
         session.setMaxInactiveInterval(60 * 5);
-        Category category = categoryService.getItemById(product.getCategory().getId());
+        List<Category> categories = categoryService.getAllItems();
 
-        model.addAttribute("category", category);
+        model.addAttribute("categories", categories);
         model.addAttribute("command", product);
 
         return "crud/product/detail";
@@ -105,7 +113,13 @@ public class ProductCrudController {
 
     @PostMapping("/details/update")
     public String updateProductDetails(@ModelAttribute Product product, BindingResult bindingResult) {
-        // TODO: Implement updating of a product.
-        return null;
+
+        if (bindingResult.hasErrors()) {
+            log.error("Error occurred while updating product.");
+            throw new BadRequestException();
+        }
+
+        productService.updateItem(product);
+        return "redirect:/crud/products";
     }
 }

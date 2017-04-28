@@ -59,7 +59,7 @@
                         <td>{{ product.description }}</td>
                         <td>{{ product.category.name }}</td>
                         <td class="last">
-                            <a class="default-a" ng-href="/crud/products/details/{{ product.id }}">Modify |</a>
+                            <a class="default-a" ng-href="/crud/products/details/{{ product.id }}">Details/Modify</a> |
                             <a class="default-a" href="#">Delete</a>
                         </td>
                     </tr>

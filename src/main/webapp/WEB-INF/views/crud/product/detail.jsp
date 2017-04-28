@@ -59,8 +59,11 @@
                                  for="category">Product Category:</f:label>
                     </div>
                     <div class="col-md-7 col-xs-9">
-                        <f:input class="default-crud-field float-left" type="text" path="category"
-                                 value="${command.category.name}"/>
+                        <f:select class="default-crud-field float-left" type="text" path="category">
+                            <c:forEach var="category" items="${categories}">
+                                <f:option value="${category.id}" selected="${category.name == command.category.name ? category.name : ''}">${category.name}</f:option>
+                            </c:forEach>
+                        </f:select>
                     </div>
                 </div>
                 <div class="col-md-12 col-xs-12">

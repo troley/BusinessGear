@@ -92,6 +92,11 @@ table {
     margin-bottom: 10px;
 }
 
+.product-description-area {
+    word-wrap: break-word;
+    max-width: 270px;
+}
+
 /* MEDIA */
 
 @media (max-width: 991px) {

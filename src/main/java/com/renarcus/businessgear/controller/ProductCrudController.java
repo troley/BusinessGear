@@ -17,7 +17,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
-import javax.naming.Binding;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -28,7 +27,8 @@ import java.util.List;
 @RequestMapping("/crud/products")
 public class ProductCrudController {
 
-    private static final Logger log = LoggerFactory.logger(ProductCrudController.class);
+    private static final Logger LOG = LoggerFactory.logger(ProductCrudController.class);
+    private final String CRUD_OVERVIEW_REDIRECTION = "redirect:/crud/products";
 
     private CategoryService categoryService;
     private ProductService productService;
@@ -81,14 +81,14 @@ public class ProductCrudController {
     public String productCreation(@ModelAttribute("command") Product product, BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()) {
-            log.error("Product not created. Returning back to product create page.");
+            LOG.error("Product not created. Returning back to product create page.");
             return "redirect:/crud/products/create";
         }
 
         productService.addItem(product);
 
-        log.info("Product created. Redirecting to products overview.");
-        return "redirect:/crud/products";
+        LOG.info("Product created. Redirecting to products overview.");
+        return CRUD_OVERVIEW_REDIRECTION;
     }
 
     @GetMapping("/details/{id}")
@@ -115,11 +115,34 @@ public class ProductCrudController {
     public String updateProductDetails(@ModelAttribute Product product, BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()) {
-            log.error("Error occurred while updating product.");
+            LOG.error("Error occurred while updating product.");
             throw new BadRequestException();
         }
 
         productService.updateItem(product);
-        return "redirect:/crud/products";
+        return CRUD_OVERVIEW_REDIRECTION;
+    }
+
+    @GetMapping("/delete/{id}")
+    public String removeProductPage(@PathVariable Integer id, Model model) {
+        if (id == null)
+            throw new ResourceNotFoundException();
+
+        Product product = productService.getItemById(id);
+
+        if (product == null)
+            throw new ResourceNotFoundException();
+
+        session.setMaxInactiveInterval(60 * 5);
+
+        model.addAttribute("command", product);
+
+        return "crud/product/delete";
+    }
+
+    @PostMapping("/delete/{id}")
+    public String removeProduct(@PathVariable int id) {
+        productService.removeItem(id);
+        return CRUD_OVERVIEW_REDIRECTION;
     }
 }

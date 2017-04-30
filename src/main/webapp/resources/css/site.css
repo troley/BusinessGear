@@ -340,7 +340,6 @@ footer a:hover {
         border-radius: 9px 9px 0 0;
         width: 320px;
         height: 320px;
-        left: -8px;
         z-index: 1;
     }
 
@@ -352,7 +351,6 @@ footer a:hover {
         border-radius: 0 0 9px 9px;
         top: 320px;
         width: 320px;
-        left: -7px;
         z-index: 1;
     }
 

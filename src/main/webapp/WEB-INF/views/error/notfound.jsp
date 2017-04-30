@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <title>Oops</title>
@@ -17,7 +18,7 @@
 </header>
 
 <div class="container body-container">
-    <h1>${errorMsg}</h1>
+    <h2 style="color: #b4b1b0">Uh oh... Something went wrong.</h2>
 </div>
 
 <footer></footer>

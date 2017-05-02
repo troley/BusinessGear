@@ -20,11 +20,11 @@
     <header class="container">
         <div class="brand">
             <h1><a href="${pageContext.request.contextPath}/home" style="color: white;">BusinessGear <sup><i
-                    class="fa fa-copyright"></i></sup></a></h1>
+                    class="fa fa-copyright"></i></sup></a><i id="items-burger" class="fa fa-reorder"></i> </h1>
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
-                <div class="filter-collection">
+                <div class="burger-items">
                     <input ng-click="vm.getAll()" class="filter-button" type="button" value="All">
                     <input ng-click="vm.getFiltered(1)" class="filter-button" type="button"
                            value="Administration (9)">
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div ng-repeat="n in vm.range(1, (vm.products.length / 3) + vm.extra)">
-                <div class="row" style="height: 255.38px;">
+                <div class="row products-row">
                     <div class="panels-wrapper">
                         <div ng-repeat="product in vm.products.slice((n - 1) * 3, n * 3)">
                             <div class="col-md-4">
@@ -115,6 +115,7 @@
 <script src="<c:url value="/resources/js/app.module.js"/>"></script>
 <script src="<c:url value="/resources/js/products.controller.js"/>"></script>
 <script src="<c:url value="/resources/js/on-img-error.js"/>"></script>
+<script src="<c:url value="/resources/js/burger.js"/>"></script>
 
 </body>
 </html>

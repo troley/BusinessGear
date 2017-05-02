@@ -283,7 +283,6 @@ header {
     opacity: 1;
 }
 
-
 .about-us .portrait {
     display: inline-flex;
     flex-wrap: wrap;
@@ -357,6 +356,19 @@ footer a:hover {
     .showcase .panel:hover #productPrice {
         display: initial !important;
     }
+
+    .products-row {
+        height: 255.38px;
+    }
+
+    #items-burger {
+        display: none;
+    }
+
+    .burger-items {
+        display: initial !important;
+    }
+
 }
 
 @media all and (max-width: 1200px) {
@@ -366,6 +378,26 @@ footer a:hover {
 }
 
 @media all and (max-width: 991px) {
+
+    #items-burger {
+        display: initial;
+        float: right;
+        font-size: 40px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .burger-items {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+
+    .burger-items .filter-button {
+        border-bottom: 1px solid white;
+    }
+
     .panels-wrapper {
         margin-left: 0;
     }
@@ -458,9 +490,6 @@ footer a:hover {
 }
 
 @media (max-width: 515px) {
-    .brand {
-        text-align: center;
-    }
 
     header {
         height: 550px;

@@ -9,7 +9,6 @@
         var vm = this;
 
         vm.products = [];
-        vm.singleProduct = null;
         vm.getAll = getAll;
         vm.getFiltered = getFiltered;
         vm.getProductById = getProductById;
@@ -55,6 +54,7 @@
                 vm.products = response.data;
             });
         }
+
     }
 
 })();

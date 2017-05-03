@@ -27,10 +27,10 @@
                 <div class="burger-items">
                     <input ng-click="vm.getAll()" class="filter-button" type="button" value="All">
                     <input ng-click="vm.getFiltered(1)" class="filter-button" type="button"
-                           value="Administration (9)">
-                    <input ng-click="vm.getFiltered(4)" class="filter-button" type="button" value="Hardware (4)">
-                    <input ng-click="vm.getFiltered(3)" class="filter-button" type="button" value="Management (12)">
-                    <input ng-click="vm.getFiltered(2)" class="filter-button" type="button" value="Development (6)">
+                           value="Administration">
+                    <input ng-click="vm.getFiltered(4)" class="filter-button" type="button" value="Hardware">
+                    <input ng-click="vm.getFiltered(3)" class="filter-button" type="button" value="Management">
+                    <input ng-click="vm.getFiltered(2)" class="filter-button" type="button" value="Development">
                 </div>
             </div>
         </div>

@@ -38,31 +38,29 @@
         </div>
         <div class="row main-detail-row">
             <div class="detail-imgs-wrapper col-md-9">
-                <div class="aside-imgs">
-                    <div class="col-md-4">
-                        <div class="first-detail-img">
-                            <div class="col-md-12">
-                                <img class="img-responsive" src="http://lorempixel.com/250/250"
-                                     alt="Small product detail image."
-                                     onerror="this.onerror=null; this.src='/resources/img/img404/imageNotFound.jpg'">
-                            </div>
+                <div class="aside-imgs col-md-4 col-xs-12">
+                    <div class="first-detail-img">
+                        <div class="col-md-12">
+                            <img class="img-responsive" src="http://lorempixel.com/250/250"
+                                 alt="Small product detail image."
+                                 onerror="this.onerror=null; this.src='/resources/img/img404/imageNotFound.jpg'">
                         </div>
-                        <div class="next-detail-img">
-                            <div class="col-md-12" style="margin-top: 30px;">
-                                <img class="img-responsive"
-                                     src="<c:url value="/resources/img/product/${product.id}/manual_cash_machine.jpg"/>"
-                                     alt="Small product detail image."
-                                     onerror="this.onerror=null; this.src='/resources/img/img404/imageNotFound.jpg'">
+                    </div>
+                    <div class="next-detail-img">
+                        <div class="col-md-12 col-sm-6" style="margin-top: 30px;">
+                            <img class="img-responsive"
+                                 src="<c:url value="/resources/img/product/${product.id}/manual_cash_machine.jpg"/>"
+                                 alt="Small product detail image."
+                                 onerror="this.onerror=null; this.src='/resources/img/img404/imageNotFound.jpg'">
 
-                            </div>
                         </div>
-                        <div class="next-detail-img">
-                            <div class="col-md-12" style="margin-top: 30px;">
-                                <img class="img-responsive"
-                                     src="<c:url value="/resources/img/product/${product.id}/not_bieber_just_grass.jpg"/>"
-                                     alt="Small product detail image."
-                                     onerror="this.onerror=null; this.src='/resources/img/img404/imageNotFound.jpg'">
-                            </div>
+                    </div>
+                    <div class="next-detail-img">
+                        <div class="col-md-12 col-sm-6" style="margin-top: 30px;">
+                            <img class="img-responsive"
+                                 src="<c:url value="/resources/img/product/${product.id}/not_bieber_just_grass.jpg"/>"
+                                 alt="Small product detail image."
+                                 onerror="this.onerror=null; this.src='/resources/img/img404/imageNotFound.jpg'">
                         </div>
                     </div>
                 </div>

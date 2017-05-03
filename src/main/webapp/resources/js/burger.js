@@ -11,13 +11,13 @@ $(document).ready(function() {
         if ($(this).hasClass(active)) {
             $(this).addClass(cross);
             $(this).removeClass(burger);
-            $('.burger-items').fadeIn(function() {
+            $('.burger-items').fadeIn(200, function() {
                 $(this).css('display', 'inline-grid');
             });
         } else {
             $(this).addClass(burger);
             $(this).removeClass(cross);
-            $('.burger-items').fadeOut(function() {
+            $('.burger-items').fadeOut(200, function() {
                 $(this).css('display', 'none');
             });
         }

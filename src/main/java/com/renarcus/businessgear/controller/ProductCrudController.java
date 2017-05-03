@@ -17,6 +17,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -28,18 +29,19 @@ import java.util.List;
 public class ProductCrudController {
 
     private static final Logger LOG = LoggerFactory.logger(ProductCrudController.class);
-    private final String CRUD_OVERVIEW_REDIRECTION = "redirect:/crud/products";
+    private final String CRUD_OVERVIEW_PAGE = "redirect:/crud/products";
+    private final int FIVE_MIN_SESSION = 60 * 5;
 
     private CategoryService categoryService;
     private ProductService productService;
 
-    @Autowired
     private HttpSession session;
 
     @Autowired
-    public ProductCrudController(CategoryService categoryService, ProductService productService) {
+    public ProductCrudController(CategoryService categoryService, ProductService productService, HttpSession session) {
         this.categoryService = categoryService;
         this.productService = productService;
+        this.session = session;
     }
 
     @ExceptionHandler(ResourceNotFoundException.class)
@@ -50,19 +52,21 @@ public class ProductCrudController {
 
     @ExceptionHandler(BadRequestException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public String handleBadRequestExpception() {
+    public String handleBadRequestException() {
         return "redirect:error/badrequest";
     }
 
     @GetMapping()
-    public String productsCrudPage() {
-        session.setMaxInactiveInterval(60 * 5); // set a 5 minutes session for logged in admin
+    public String productsCrudMainPage(HttpServletRequest req) {
+        session = req.getSession();
+        session.setMaxInactiveInterval(FIVE_MIN_SESSION); // set a 5 minutes session for logged in admin
         return "crud/product/products";
     }
 
     @GetMapping("/create")
-    public String productCreationPage(Model model) {
-        session.setMaxInactiveInterval(60 * 5);
+    public String productCreationPage(HttpServletRequest req, Model model) {
+        session = req.getSession();
+        session.setMaxInactiveInterval(FIVE_MIN_SESSION);
         List<Category> categories = categoryService.getAllItems();
         model.addAttribute("command", new Product());
         model.addAttribute("categories", categories);
@@ -88,11 +92,11 @@ public class ProductCrudController {
         productService.addItem(product);
 
         LOG.info("Product created. Redirecting to products overview.");
-        return CRUD_OVERVIEW_REDIRECTION;
+        return CRUD_OVERVIEW_PAGE;
     }
 
     @GetMapping("/details/{id}")
-    public String showProductDetails(@PathVariable Integer id, Model model) {
+    public String showProductDetails(@PathVariable Integer id, HttpServletRequest req, Model model) {
 
         if (id == null)
             throw new ResourceNotFoundException();
@@ -102,7 +106,8 @@ public class ProductCrudController {
         if (product == null)
             throw new ResourceNotFoundException();
 
-        session.setMaxInactiveInterval(60 * 5);
+        session = req.getSession();
+        session.setMaxInactiveInterval(FIVE_MIN_SESSION);
         List<Category> categories = categoryService.getAllItems();
 
         model.addAttribute("categories", categories);
@@ -120,7 +125,7 @@ public class ProductCrudController {
         }
 
         productService.updateItem(product);
-        return CRUD_OVERVIEW_REDIRECTION;
+        return CRUD_OVERVIEW_PAGE;
     }
 
     @GetMapping("/delete/{id}")
@@ -133,7 +138,7 @@ public class ProductCrudController {
         if (product == null)
             throw new ResourceNotFoundException();
 
-        session.setMaxInactiveInterval(60 * 5);
+        session.setMaxInactiveInterval(FIVE_MIN_SESSION);
 
         model.addAttribute("command", product);
 
@@ -143,6 +148,6 @@ public class ProductCrudController {
     @PostMapping("/delete/{id}")
     public String removeProduct(@PathVariable int id) {
         productService.removeItem(id);
-        return CRUD_OVERVIEW_REDIRECTION;
+        return CRUD_OVERVIEW_PAGE;
     }
 }

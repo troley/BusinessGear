@@ -311,6 +311,10 @@ header {
     text-align: right;
 }
 
+.detail-imgs-wrapper .aside-imgs img {
+    margin: auto;
+}
+
 footer {
     background-color: #9a9796;
     min-height: 88px;
@@ -455,6 +459,24 @@ footer a:hover {
     .about-us .portrait .after {
         order: 2;
         text-align: center;
+    }
+
+    .main-detail-row {
+        text-align: center;
+    }
+
+    .detail-imgs-wrapper {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+
+    .detail-imgs-wrapper .aside-imgs {
+        order: 2;
+        margin-top: 50px;
+    }
+
+    .detail-imgs-wrapper .large-detail-img {
+        order: 1;
     }
 
     .about-us .portrait-img img,

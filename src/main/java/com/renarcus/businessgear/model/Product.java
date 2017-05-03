@@ -35,6 +35,16 @@ public class Product {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
+    public Product() {
+    }
+
+    public Product(String name, String price, String description, Category category) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.category = category;
+    }
+
     public int getId() {
         return id;
     }

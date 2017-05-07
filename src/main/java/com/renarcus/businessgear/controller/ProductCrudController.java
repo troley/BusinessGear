@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -47,7 +48,7 @@ public class ProductCrudController {
     @ExceptionHandler(ResourceNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public String handleResourceNotFoundException() {
-        return "redirect:error/notfound";
+        return "redirect:error/404";
     }
 
     @ExceptionHandler(BadRequestException.class)
@@ -82,11 +83,11 @@ public class ProductCrudController {
     }
 
     @PostMapping("/create")
-    public String productCreation(@ModelAttribute("command") Product product, BindingResult bindingResult) {
+    public String productCreation(@Valid @ModelAttribute("command") Product product, BindingResult bindingResult) {
 
         if (bindingResult.hasErrors()) {
             LOG.error("Product not created. Returning back to product create page.");
-            return "redirect:/crud/products/create";
+            return "error/500";
         }
 
         productService.addItem(product);
@@ -150,4 +151,5 @@ public class ProductCrudController {
         productService.removeItem(id);
         return CRUD_OVERVIEW_PAGE;
     }
+
 }

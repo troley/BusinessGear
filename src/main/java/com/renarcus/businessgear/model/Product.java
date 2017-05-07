@@ -25,7 +25,7 @@ public class Product {
 
     @NotNull
     @Money
-    private String price;
+    private double price;
 
     @Size(max=255)
     private String description;
@@ -38,7 +38,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(String name, String price, String description, Category category) {
+    public Product(String name, double price, String description, Category category) {
         this.name = name;
         this.price = price;
         this.description = description;
@@ -61,11 +61,11 @@ public class Product {
         this.name = name;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

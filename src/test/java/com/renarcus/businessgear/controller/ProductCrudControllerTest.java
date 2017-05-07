@@ -1,6 +1,5 @@
 package com.renarcus.businessgear.controller;
 
-import com.renarcus.businessgear.controller.ProductCrudController;
 import com.renarcus.businessgear.model.Category;
 import com.renarcus.businessgear.model.Product;
 import com.renarcus.businessgear.service.category.CategoryService;
@@ -17,6 +16,7 @@ import java.util.List;
 
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**
@@ -38,6 +38,7 @@ public class ProductCrudControllerTest {
 
     private MockMvc mockMvc;
 
+
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
@@ -49,6 +50,7 @@ public class ProductCrudControllerTest {
     @Test
     public void testAccessCrudMainPage() throws Exception {
         mockMvc.perform(get("/crud/products"))
+                .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(view().name("crud/product/products"));
         when(productService.getAllItems()).thenReturn(products);
@@ -57,19 +59,36 @@ public class ProductCrudControllerTest {
     @Test
     public void testAccessCrudProductCreationPage() throws Exception {
         List<Category> allCategories = categoryService.getAllItems();
+
         mockMvc.perform(get("/crud/products/create"))
                 .andExpect(status().isOk())
-                .andExpect(model().attribute(eq("command"), any(Product.class)))
+                .andExpect(model().attributeExists("command"))
                 .andExpect(model().attribute("categories", allCategories))
                 .andExpect(view().name("crud/product/create"));
     }
+/*
+    @Test
+    public void testCreateNewInvalidProduct() throws Exception {
+        mockMvc.perform(post("/crud/products/create")
+                .param("name", "testproduct")
+                .param("price", "439.937") // Constraint violated price
+                .param("description", "")
+                .param("category", "1")
+        )
+                .andDo(print())
+                .andExpect(model().attributeExists("command"))
+                .andExpect(model().attributeHasFieldErrors("command", "price"))
+                .andExpect(redirectedUrl("/crud/products"))
+                .andExpect(view().name("/error/500"));
+    }
+*/
 
     @Test
-    public void testCreateNewProduct() throws Exception {
+    public void testCreateNewValidProduct() throws Exception {
         mockMvc.perform(post("/crud/products/create")
                 .contentType(MediaType.APPLICATION_FORM_URLENCODED)
         )
-                .andExpect(model().attribute(eq("command"), any(Product.class)))
+                .andExpect(model().attributeExists("command"))
                 .andExpect(redirectedUrl("/crud/products"))
                 .andExpect(view().name("redirect:/crud/products"));
     }

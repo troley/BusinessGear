@@ -12,12 +12,8 @@
 
 <body>
 
-<header class="container-fluid">
-    <div class="brand">
-        <h1><a href="${pageContext.request.contextPath}/" style="color: white;">BusinessGear <sup><i
-                class="fa fa-copyright"></i></sup></a></h1>
-    </div>
-</header>
+<jsp:include page="/WEB-INF/partials/header.jsp"/>
+
 
 <div class="container body-container">
     <div class="row">
@@ -47,30 +43,8 @@
     <div class="push"></div>
 </div>
 
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <ul class="no-list-style">
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <ul class="no-list-style">
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">The Team</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <ul class="no-list-style">
-                    <li><a href="#">Software Collection</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
+<jsp:include page="/WEB-INF/partials/footer.jsp"/>
+
 
 </body>
 </html>

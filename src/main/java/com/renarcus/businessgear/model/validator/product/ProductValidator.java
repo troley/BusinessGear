@@ -1,4 +1,4 @@
-package com.renarcus.businessgear.model.validator;
+package com.renarcus.businessgear.model.validator.product;
 
 import com.renarcus.businessgear.model.Product;
 import org.springframework.validation.Errors;

@@ -1,4 +1,4 @@
-package com.renarcus.businessgear.model.validator;
+package com.renarcus.businessgear.model.validator.money;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

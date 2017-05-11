@@ -10,12 +10,7 @@
 </head>
 <body>
 
-<header class="container-fluid">
-    <div class="brand">
-        <h1><a href="${pageContext.request.contextPath}/" style="color: white;">BusinessGear <sup><i
-                class="fa fa-copyright"></i></sup></a></h1>
-    </div>
-</header>
+<jsp:include page="/WEB-INF/partials/header.jsp"/>
 
 <div class="container body-container">
     <h2 style="color: #b4b1b0">Server error.</h2>

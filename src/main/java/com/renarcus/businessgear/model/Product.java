@@ -1,6 +1,6 @@
 package com.renarcus.businessgear.model;
 
-import com.renarcus.businessgear.model.validator.Money;
+import com.renarcus.businessgear.model.validator.money.Money;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

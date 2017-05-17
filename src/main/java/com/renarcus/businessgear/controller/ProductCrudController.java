@@ -34,8 +34,7 @@ public class ProductCrudController {
 
     private CategoryService categoryService;
     private ProductService productService;
-
-
+    
     @Autowired
     public ProductCrudController(CategoryService categoryService, ProductService productService) {
         this.categoryService = categoryService;

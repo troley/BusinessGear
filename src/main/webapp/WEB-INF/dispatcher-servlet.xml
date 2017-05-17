@@ -62,7 +62,7 @@
         <constructor-arg name="categoryDao" ref="categoryDao"/>
     </bean>
 
-    <bean id="productValidator" class="com.renarcus.businessgear.model.validator.ProductValidator"/>
+    <bean id="productValidator" class="com.renarcus.businessgear.model.validator.product.ProductValidator"/>
 
     <bean id="adminDao" class="com.renarcus.businessgear.dao.admin.AdminDaoImpl">
         <constructor-arg name="sessionFactory" ref="sessionFactory"/>

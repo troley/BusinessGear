@@ -13,12 +13,7 @@
 </head>
 <body>
 
-<header class="container-fluid">
-    <div class="brand">
-        <h1><a href="${pageContext.request.contextPath}/" style="color: white;">BusinessGear <sup><i
-                class="fa fa-copyright"></i></sup></a></h1>
-    </div>
-</header>
+<jsp:include page="/WEB-INF/partials/header.jsp"/>
 
 <section class="main">
     <div class="container body-container">
@@ -108,7 +103,9 @@
                     </div>
                 </div>
                 <div class="col-md-12" style="text-align: center;">
-                    <input class="default-dark-button" type="button" value="Let us know">
+                    <a href="${pageContext.request.contextPath}/interested">
+                        <input class="default-dark-button" type="submit" value="Let us know">
+                    </a>
                 </div>
             </div>
         </div>
@@ -116,30 +113,7 @@
     </div>
 </section>
 
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <ul class="no-list-style">
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <ul class="no-list-style">
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">The Team</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <ul class="no-list-style">
-                    <li><a href="#">Software Collection</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
+<jsp:include page="/WEB-INF/partials/footer.jsp"/>
 
 <script src="<c:url value="/resources/js/jquery-3.1.1.min.js"/>"></script>
 <script src="<c:url value="/resources/js/on-img-error.js"/>"></script>

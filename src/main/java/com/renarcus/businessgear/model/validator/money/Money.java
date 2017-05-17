@@ -1,4 +1,4 @@
-package com.renarcus.businessgear.model.validator;
+package com.renarcus.businessgear.model.validator.money;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Money {
 
-    String message() default "{com/renarcus/businessgear/model/validator/Money.java" + "message}";
+    String message() default "{com/renarcus/businessgear/model/validator/money/Money.java" + "message}";
 
     Class<?>[] groups() default {};
 

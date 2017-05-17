@@ -17,7 +17,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.List;
@@ -36,13 +35,11 @@ public class ProductCrudController {
     private CategoryService categoryService;
     private ProductService productService;
 
-    private HttpSession session;
 
     @Autowired
-    public ProductCrudController(CategoryService categoryService, ProductService productService, HttpSession session) {
+    public ProductCrudController(CategoryService categoryService, ProductService productService) {
         this.categoryService = categoryService;
         this.productService = productService;
-        this.session = session;
     }
 
     @ExceptionHandler(ResourceNotFoundException.class)
@@ -58,15 +55,13 @@ public class ProductCrudController {
     }
 
     @GetMapping()
-    public String productsCrudMainPage(HttpServletRequest req) {
-        session = req.getSession();
+    public String productsCrudMainPage(HttpSession session) {
         session.setMaxInactiveInterval(FIVE_MIN_SESSION); // set a 5 minutes session for logged in admin
         return "crud/product/products";
     }
 
     @GetMapping("/create")
-    public String productCreationPage(HttpServletRequest req, Model model) {
-        session = req.getSession();
+    public String productCreationPage(HttpSession session, Model model) {
         session.setMaxInactiveInterval(FIVE_MIN_SESSION);
         List<Category> categories = categoryService.getAllItems();
         model.addAttribute("command", new Product());
@@ -97,7 +92,7 @@ public class ProductCrudController {
     }
 
     @GetMapping("/details/{id}")
-    public String showProductDetails(@PathVariable Integer id, HttpServletRequest req, Model model) {
+    public String showProductDetails(@PathVariable Integer id, HttpSession session, Model model) {
 
         if (id == null)
             throw new ResourceNotFoundException();
@@ -107,7 +102,6 @@ public class ProductCrudController {
         if (product == null)
             throw new ResourceNotFoundException();
 
-        session = req.getSession();
         session.setMaxInactiveInterval(FIVE_MIN_SESSION);
         List<Category> categories = categoryService.getAllItems();
 
@@ -130,7 +124,7 @@ public class ProductCrudController {
     }
 
     @GetMapping("/delete/{id}")
-    public String removeProductPage(@PathVariable Integer id, Model model) {
+    public String removeProductPage(@PathVariable Integer id, HttpSession session, Model model) {
         if (id == null)
             throw new ResourceNotFoundException();
 

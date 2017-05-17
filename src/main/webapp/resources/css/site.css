@@ -27,7 +27,7 @@ a, a:hover {
     border-radius: 6px;
     margin-top: 20px;
     font-size: 22px;
-    transition: 0.8s;
+    transition: 0.3s;
 }
 
 .default-dark-button:hover {
@@ -142,7 +142,7 @@ header {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 1px;
-    transition: background-color .8s;
+    transition: background-color .3s;
 }
 
 #interestSubmit:hover {
@@ -184,13 +184,13 @@ header {
 
 .showcase .panel {
     position: absolute;
-    transition: width .8s;
+    transition: width .3s;
 }
 
 .showcase .panels-wrapper .panel img {
     width: 270px;
     height: 211px;
-    transition: height .8s, width .8s;
+    transition: height .3s, width .3s;
 }
 
 .panel-title {
@@ -204,7 +204,7 @@ header {
     width: 270px;
     height: 44.4px;
     top: 210px;
-    transition: 0.8s;
+    transition: 0.3s;
 }
 
 .panel-image-title h3 {
@@ -254,7 +254,7 @@ header {
     font-size: 20px;
     margin-bottom: 35px;
     opacity: 0.4;
-    transition: all .8s;
+    transition: all .3s;
 }
 
 .step-by-step .big-round-num {
@@ -265,7 +265,7 @@ header {
     color: #6f706e;
     opacity: 0.6;
     margin-right: 15px;
-    transition: all .8s;
+    transition: all .3s;
 }
 
 .step-by-step .clickable {

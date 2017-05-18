@@ -168,10 +168,6 @@ header {
     border-bottom: 1px solid #9c9b9b;
 }
 
-.panels-wrapper {
-    margin-left: 5.5%;
-}
-
 .panel {
     font-family: 'Slabo 27px', serif;
     width: 270px;
@@ -186,7 +182,7 @@ header {
     transition: width .3s;
 }
 
-.showcase .panels-wrapper .panel img {
+.showcase .panel img {
     width: 270px;
     height: 211px;
     transition: height .3s, width .3s;
@@ -328,7 +324,14 @@ footer a:hover {
     color: black;
 }
 
-/* HOVER IMG IN SHOWCASE */
+/* MEDIA */
+
+@media (min-width: 1200px) {
+    .panel {
+        margin-left: 35px;
+    }
+}
+
 @media (min-width: 991px) {
 
     .showcase .panel:hover {
@@ -374,12 +377,6 @@ footer a:hover {
 
 }
 
-@media all and (max-width: 1200px) {
-    .panels-wrapper {
-        margin-left: 2%;
-    }
-}
-
 @media all and (max-width: 991px) {
 
     #items-burger {
@@ -399,10 +396,6 @@ footer a:hover {
 
     .burger-items .filter-button {
         border-bottom: 1px solid white;
-    }
-
-    .panels-wrapper {
-        margin-left: 0;
     }
 
     .panel {

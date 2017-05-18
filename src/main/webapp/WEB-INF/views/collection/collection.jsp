@@ -17,7 +17,7 @@
 <body>
 
 <div ng-app="app" ng-controller="ProductsController as vm">
-    <header class="container">
+    <header class="container-fluid">
         <div class="brand">
             <h1><a href="${pageContext.request.contextPath}/home" style="color: white;">BusinessGear <sup><i
                     class="fa fa-copyright"></i></sup></a><i id="items-burger" class="fa fa-reorder"></i> </h1>
@@ -36,7 +36,7 @@
         </div>
     </header>
     <section class="showcase">
-        <div class="container body-container">
+        <div class="container-fluid body-container">
             <div class="row">
                 <div class="breadcrumbs">
                     <a href="${pageContext.request.contextPath}/home">Home&ensp;<i
@@ -54,7 +54,7 @@
             </div>
             <div ng-repeat="n in vm.range(1, (vm.products.length / 3) + vm.extra)">
                 <div class="row products-row">
-                    <div class="panels-wrapper">
+                    <div class="container">
                         <div ng-repeat="product in vm.products.slice((n - 1) * 3, n * 3)">
                             <div class="col-md-4">
                                 <div class="panel">

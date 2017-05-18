@@ -94,3 +94,9 @@ span.detail-text-color {
         height: 579px;
     }
 }
+
+@media (max-width: 991px) {
+    .detail-description-wrapper {
+        margin-top: 20px;
+    }
+}

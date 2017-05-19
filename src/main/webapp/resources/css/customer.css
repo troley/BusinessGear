@@ -3,3 +3,80 @@
 header {
     height: 250px;
 }
+
+.fancy-header-cursive-text {
+    font-family: 'Overlock', cursive;
+}
+
+.follow-steps-text {
+    text-align: center;
+    width: 480px;
+    margin: 0 auto 5px auto;
+    font-weight: bold;
+}
+
+.registration-panel {
+    text-align: center;
+    border: 2px solid black;
+    width: 500px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
+}
+
+.registration-steps {
+    border-bottom: 2px solid black;
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.registration-steps ul {
+    display: inline-block;
+    color: white;
+    width: 100%;
+    font-size: 45px;
+}
+
+.registration-steps ul::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 90px;
+    width: 65%;
+    border-bottom: 2px dashed #cccccc;
+}
+
+.registration-steps li {
+}
+
+.registration-steps li span {
+    cursor: pointer;
+    padding: 2px 15px 2px 15px;
+    border-radius: 50%;
+    background-color: #f3f2f1;
+}
+
+.registration-steps #step-one span {
+    padding: 2px 17px 2px 17px;
+}
+
+.registration-panel li.active span {
+    opacity: 1;
+    background-color: #c12e2a;
+}
+
+.default-bg-field {
+    border: 2px solid #a9a9a9;
+    border-radius: 5px;
+    height: 45px;
+    width: 100%;
+    padding-left: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.customer-registration,
+.product-of-interest,
+.registration-confirmation {
+    margin-top: 30px;
+}

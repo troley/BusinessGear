@@ -3,7 +3,11 @@ package com.renarcus.businessgear.service;
 import java.util.List;
 
 /**
- * Created by Troley on 19-4-2017
+ * Abstract boilerplate service interface for easier
+ * use with new service interfaces.
+ *
+ * @param <T> The return/parameter object.
+ * @param <E> The object for defining the Id parameter data type.
  */
 public interface AbstractService<T, E> {
 

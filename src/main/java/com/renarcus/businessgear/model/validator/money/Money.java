@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Money {
 
-    String message() default "{com/renarcus/businessgear/model/validator/money/Money.java" + "message}";
+    String message() default "{Money" + "message}";
 
     Class<?>[] groups() default {};
 

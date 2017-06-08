@@ -54,6 +54,7 @@ header {
     padding: 2px 15px 2px 15px;
     border-radius: 50%;
     background-color: #f3f2f1;
+    transition: background-color .5s;
 }
 
 .registration-steps #step-one span {
@@ -75,8 +76,20 @@ header {
     margin-bottom: 10px;
 }
 
+#interestedForm {
+    margin-top: 30px;
+}
+
 .customer-registration,
 .product-of-interest,
 .registration-confirmation {
-    margin-top: 30px;
+    transition: all .5s;
+    display: none;
 }
+.customer-registration.active,
+.product-of-interest.active,
+.registration-confirmation.active {
+    display: initial;
+}
+
+

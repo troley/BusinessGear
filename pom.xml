@@ -23,6 +23,7 @@
         <log4j.version>2.8.2</log4j.version>
         <javax-servlet.version>3.1.0</javax-servlet.version>
         <springframework-security.version>4.1.4.RELEASE</springframework-security.version>
+        <bcrypt.version>0.4</bcrypt.version>
     </properties>
 
     <dependencies>
@@ -118,6 +119,13 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>${javax-servlet.version}</version>
+        </dependency>
+
+        <!-- BCRYPT -->
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>${bcrypt.version}</version>
         </dependency>
 
         <!-- TEST -->

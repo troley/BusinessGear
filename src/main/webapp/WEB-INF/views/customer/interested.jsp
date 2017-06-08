@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>Registration</title>
@@ -53,29 +54,31 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <div class="customer-registration active">
-                            <div class="col-xs-12">
-                                <input class="default-bg-field" type="text" placeholder="First Name">
+                        <form id="interestedForm" modelAttribute="command" action="/user_registration" method="post">
+                            <div class="customer-registration active">
+                                <div class="col-xs-12">
+                                    <input class="default-bg-field" type="text" placeholder="First Name" required>
+                                </div>
+                                <div class="col-xs-12">
+                                    <input class="default-bg-field" type="text" placeholder="Last Name" required>
+                                </div>
+                                <div class="col-xs-12">
+                                    <input class="default-bg-field" type="email" placeholder="Email Address" required>
+                                </div>
+                                <div class="col-xs-12">
+                                    <input class="default-bg-field" type="tel" placeholder="Tel. nr." required>
+                                </div>
+                                <div class="col-xs-12">
+                                    <input id="chooseProducts" class="default-dark-button" type="button" value="Choose products">
+                                </div>
                             </div>
-                            <div class="col-xs-12">
-                                <input class="default-bg-field" type="text" placeholder="Last Name">
+                            <div class="product-of-interest">
+                                <div ngIf=""></div>
                             </div>
-                            <div class="col-xs-12">
-                                <input class="default-bg-field" type="text" placeholder="Email Address">
-                            </div>
-                            <div class="col-xs-12">
-                                <input class="default-bg-field" type="text" placeholder="Tel. nr.">
-                            </div>
-                            <div class="col-xs-12">
-                                <input class="default-dark-button" type="button" value="Choose products">
-                            </div>
-                        </div>
-                        <div class="product-of-interest">
+                            <div class="registration-confirmation">
 
-                        </div>
-                        <div class="registration-confirmation">
-
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -91,6 +94,9 @@
 
 <jsp:include page="/WEB-INF/partials/footer.jsp"/>
 
+<script src="<c:url value="/resources/js/jquery-3.1.1.min.js"/>"></script>
+<script src="<c:url value="/resources/js/on-img-error.js"/>"></script>
+<script src="<c:url value="/resources/js/interested.js"/>"></script>
 
 </body>
 </html>

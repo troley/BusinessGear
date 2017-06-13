@@ -17,7 +17,8 @@ header {
     margin-bottom: 20px;
 }
 
-#logInSubmit {
+#logInSubmit,
+#registerSubmit{
     border: none;
     border-radius: 5px;
     background-color: #515a5f;

@@ -7,21 +7,25 @@
        http://www.springframework.org/schema/security
        http://www.springframework.org/schema/security/spring-security-4.1.xsd">
 
-    <http auto-config="true">
+    <beans:import resource="dispatcher-servlet.xml"/>
+
+    <http authentication-manager-ref="authManager" use-expressions="true" auto-config="false">
         <session-management>
             <concurrency-control expired-url="/admin" />
         </session-management>
         <intercept-url pattern="/crud/products/**" access="hasRole('ROLE_ADMIN')"/>
+        <intercept-url pattern="/admin/register/**" access="hasRole('ROLE_ADMIN')"/>
         <form-login login-page="/admin"
                     username-parameter="username"
                     password-parameter="password"
-                    authentication-success-forward-url="/admin/login"
+                    default-target-url="/crud/products"
                     authentication-failure-url="/admin"/>
     </http>
 
-    <user-service>
-        <user name="admin" password="admin" authorities="ROLE_ADMIN"/>
-    </user-service>
-
+    <authentication-manager id="authManager">
+        <authentication-provider user-service-ref="customUserService">
+            <password-encoder ref="passwordEncoder" />
+        </authentication-provider>
+    </authentication-manager>
 
 </beans:beans>

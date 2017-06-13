@@ -3,6 +3,7 @@ package com.renarcus.businessgear.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
 
 /**
  * Created by Troley on 19-4-2017
@@ -12,8 +13,10 @@ import javax.persistence.Table;
 public class Admin {
 
     @Id
+    @Size(min = 3)
     private String username;
 
+    @Size(min = 4)
     private String password;
 
     public Admin() {

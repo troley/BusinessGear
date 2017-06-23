@@ -4,6 +4,7 @@ import com.renarcus.businessgear.model.validator.phone.Phone;
 import org.hibernate.validator.constraints.Email;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
@@ -19,10 +20,12 @@ public class Customer {
 
     @NotNull
     @Column(name = "first_name")
+    @Min(2)
     private String fname;
 
     @NotNull
     @Column(name = "last_name")
+    @Min(2)
     private String lname;
 
     @NotNull
@@ -36,7 +39,10 @@ public class Customer {
     @NotNull
     private String telnumber;
 
-
+    @NotNull
+    @ManyToOne
+    @JoinColumn(name = "chosen_products", nullable = false)
+    private Product chosenProducts;
 
     public int getCustomerId() {
         return customerId;
@@ -84,5 +90,13 @@ public class Customer {
 
     public void setTelnumber(String telnumber) {
         this.telnumber = telnumber;
+    }
+
+    public Product getChosenProducts() {
+        return chosenProducts;
+    }
+
+    public void setChosenProducts(Product chosenProducts) {
+        this.chosenProducts = chosenProducts;
     }
 }

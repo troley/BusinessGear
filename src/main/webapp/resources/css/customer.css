@@ -19,7 +19,7 @@ header {
     text-align: center;
     border: 2px solid black;
     width: 500px;
-    height: 400px;
+    height: 480px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 7px;
@@ -44,9 +44,6 @@ header {
     left: 90px;
     width: 65%;
     border-bottom: 2px dashed #cccccc;
-}
-
-.registration-steps li {
 }
 
 .registration-steps li span {
@@ -76,20 +73,34 @@ header {
     margin-bottom: 10px;
 }
 
-#interestedForm {
-    margin-top: 30px;
-}
-
 .customer-registration,
 .product-of-interest,
 .registration-confirmation {
     transition: all .5s;
     display: none;
 }
+
 .customer-registration.active,
 .product-of-interest.active,
 .registration-confirmation.active {
     display: initial;
 }
 
+.second-step-image-wrapper {
+    margin-bottom: 15px;
+}
 
+.second-step-image-wrapper img {
+    cursor: pointer;
+}
+
+.second-step-image-wrapper img {
+    border: 5px solid lightgray;
+    border-radius: 7px;
+}
+
+.images-overflow {
+    text-align: center;
+    max-height: 280px;
+    overflow: auto;
+}

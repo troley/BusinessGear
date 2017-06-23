@@ -53,32 +53,62 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 text-center">
-                        <form id="interestedForm" modelAttribute="command" action="/user_registration" method="post">
+                    <div class="col-md-12">
+                        <f:form id="interestedForm" action="/user_registration" method="post">
                             <div class="customer-registration active">
-                                <div class="col-xs-12">
-                                    <input class="default-bg-field" type="text" placeholder="First Name" required>
+                                <div class="col-xs-12" style="margin-top: 45px;">
+                                    <f:input class="default-bg-field" type="text" path="fname"
+                                             placeholder="First Name"/>
+                                    <div class="err"></div>
                                 </div>
                                 <div class="col-xs-12">
-                                    <input class="default-bg-field" type="text" placeholder="Last Name" required>
+                                    <f:input class="default-bg-field" type="text" path="lname" placeholder="Last Name"/>
                                 </div>
                                 <div class="col-xs-12">
-                                    <input class="default-bg-field" type="email" placeholder="Email Address" required>
+                                    <f:input class="default-bg-field" type="date" path="birthdate"
+                                             placeholder="Email Address"/>
                                 </div>
                                 <div class="col-xs-12">
-                                    <input class="default-bg-field" type="tel" placeholder="Tel. nr." required>
+                                    <f:input class="default-bg-field" type="email" path="email"
+                                             placeholder="Email Address" required="required"/>
                                 </div>
                                 <div class="col-xs-12">
-                                    <input id="chooseProducts" class="default-dark-button" type="button" value="Choose products">
+                                    <f:input class="default-bg-field" type="number" path="telnumber"
+                                             placeholder="Tel. nr."/>
+                                </div>
+                                <div class="col-xs-12">
+                                    <input id="chooseProducts" class="default-dark-button" type="button"
+                                           value="Choose products">
                                 </div>
                             </div>
                             <div class="product-of-interest">
-                                <div ngIf=""></div>
+                                <div class="col-md-12" style="margin-bottom: 20px;">
+                                    <b>Select products you are interested in:</b>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="images-overflow">
+                                        <c:forEach var="product" items="${products}">
+                                            <div class=" col-md-12 second-step-image-wrapper">
+                                                <div class="col-md-12">
+                                                    <img src="http://lorempixel.com/250/250" alt="">
+                                                </div>
+                                                <div class="col-md-12">
+                                                        ${product.name}
+                                                </div>
+                                                <f:input type="hidden" path="chosenProducts" value="${product.id}"/>
+                                            </div>
+                                        </c:forEach>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <input id="goToConfirmation" class="default-dark-button"
+                                           type="button" value="Go to confirmation page">
+                                </div>
                             </div>
                             <div class="registration-confirmation">
 
                             </div>
-                        </form>
+                        </f:form>
                     </div>
                 </div>
             </div>

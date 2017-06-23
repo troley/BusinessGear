@@ -33,6 +33,11 @@ a, a:hover {
     transition: 0.3s;
 }
 
+.err {
+    font-weight: 700;
+    color: red;
+}
+
 .default-dark-button:hover {
     background-color: #2f3438;
     color: #bf0000;

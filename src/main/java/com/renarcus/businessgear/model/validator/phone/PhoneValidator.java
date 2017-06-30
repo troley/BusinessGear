@@ -11,6 +11,7 @@ public class PhoneValidator implements ConstraintValidator<Phone, String> {
     public void initialize(Phone phone) {}
 
     public boolean isValid(String phonenr, ConstraintValidatorContext constraintValidatorContext) {
-        return phonenr != null && phonenr.matches("(\\d{20})");
+        // string between 10-15 digits (e.g. +316 ... 06 ... foreign tel. numbers etc.)
+        return phonenr != null && phonenr.matches("(\\d{10,15})");
     }
 }

@@ -54,27 +54,27 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <f:form id="interestedForm" action="/user_registration" method="post">
+                        <f:form id="interestedForm"
+                                action="${pageContext.request.contextPath}/api/customer/interested">
+
                             <div class="customer-registration active">
                                 <div class="col-xs-12" style="margin-top: 45px;">
-                                    <f:input class="default-bg-field" type="text" path="fname"
-                                             placeholder="First Name"/>
-                                    <div class="err"></div>
+                                    <f:input class="default-bg-field" type="text" path="fname" placeholder="First Name"/>
                                 </div>
                                 <div class="col-xs-12">
                                     <f:input class="default-bg-field" type="text" path="lname" placeholder="Last Name"/>
                                 </div>
                                 <div class="col-xs-12">
                                     <f:input class="default-bg-field" type="date" path="birthdate"
-                                             placeholder="Email Address"/>
+                                           placeholder="Bith date Address"/>
                                 </div>
                                 <div class="col-xs-12">
                                     <f:input class="default-bg-field" type="email" path="email"
-                                             placeholder="Email Address" required="required"/>
+                                           placeholder="Email Address" required="required"/>
                                 </div>
                                 <div class="col-xs-12">
                                     <f:input class="default-bg-field" type="number" path="telnumber"
-                                             placeholder="Tel. nr."/>
+                                           placeholder="Tel. nr."/>
                                 </div>
                                 <div class="col-xs-12">
                                     <input id="chooseProducts" class="default-dark-button" type="button"
@@ -82,32 +82,82 @@
                                 </div>
                             </div>
                             <div class="product-of-interest">
-                                <div class="col-md-12" style="margin-bottom: 20px;">
-                                    <b>Select products you are interested in:</b>
+                                <div class="col-xs-12" style="margin: 10px 0 20px 0;">
+                                    <b style="margin-left: -20px;">Select products you are interested in:</b>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-xs-12">
                                     <div class="images-overflow">
-                                        <c:forEach var="product" items="${products}">
-                                            <div class=" col-md-12 second-step-image-wrapper">
-                                                <div class="col-md-12">
+                                        <c:forEach items="${products}" var="product">
+                                            <div class=" col-xs-12 second-step-image-wrapper">
+                                                <div class="col-xs-12">
                                                     <img src="http://lorempixel.com/250/250" alt="">
                                                 </div>
-                                                <div class="col-md-12">
+                                                <div class="col-xs-12">
                                                         ${product.name}
                                                 </div>
-                                                <f:input type="hidden" path="chosenProducts" value="${product.id}"/>
+                                                <span style="display: none;" value="${product.id}"></span>
                                             </div>
                                         </c:forEach>
+                                        <f:select id="productsSelectBox" multiple="true" path="products" style="display: none;">
+                                            <c:forEach items="${products}" var="product">
+                                                <f:option value="${product.id}"/>
+                                            </c:forEach>
+                                        </f:select>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-xs-12">
                                     <input id="goToConfirmation" class="default-dark-button"
                                            type="button" value="Go to confirmation page">
                                 </div>
                             </div>
                             <div class="registration-confirmation">
+                                <div class="col-xs-4" style="margin-top: 20px; text-align: right;">
+                                    <div class="col-xs-12">
+                                        <b>First name:</b>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <b>Last name:</b>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <b>Birth date:</b>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <b>Email address:</b>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <b>Tel. number:</b>
+                                    </div>
+                                </div>
+                                <div class="col-xs-8" style="margin-top: 20px; text-align: left; padding-left: 0;">
+                                    <div class="col-xs-12">
+                                        <b id="firstNameConfirm"></b>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <b id="lastNameConfirm"></b>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <b id="birthDateConfirm"></b>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <b id="emailConfirm"></b>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <b id="telNumConfirm"></b>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12" style="margin: 40px 0 20px 0;">
+                                    <b style="margin-left: -20px;">These are the products you've chosen:</b>
+                                    <ul id="chosenProductsList" class="no-list-style">
 
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12">
+                                    <input id="interestedSubmit" class="default-dark-button"
+                                           type="submit" value="Submit"/>
+                                </div>
                             </div>
+                            <!-- csrf is most probably disabled -->
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                         </f:form>
                     </div>
                 </div>

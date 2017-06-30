@@ -94,7 +94,7 @@
             <version>${mysql.version}</version>
         </dependency>
 
-        <!-- JACKSON -->
+        <!-- FASTERXML.JACKSON -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
@@ -148,6 +148,11 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.tensorflow</groupId>
+            <artifactId>tensorflow</artifactId>
+            <version>1.2.0</version>
+        </dependency>
 
     </dependencies>
 

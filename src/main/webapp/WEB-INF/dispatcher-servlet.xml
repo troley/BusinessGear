@@ -36,6 +36,7 @@
                 <value>com.renarcus.businessgear.model.Product</value>
                 <value>com.renarcus.businessgear.model.Category</value>
                 <value>com.renarcus.businessgear.model.Admin</value>
+                <value>com.renarcus.businessgear.model.Customer</value>
             </list>
         </property>
         <property name="hibernateProperties">
@@ -75,6 +76,14 @@
     <bean id="adminController" class="com.renarcus.businessgear.controller.AdminController">
         <constructor-arg name="adminService" ref="adminService"/>
         <constructor-arg name="encoder" ref="passwordEncoder"/>
+    </bean>
+
+    <bean id="customerDao" class="com.renarcus.businessgear.dao.customer.CustomerDaoImpl">
+        <constructor-arg name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="customerService" class="com.renarcus.businessgear.service.customer.CustomerServiceImpl">
+        <constructor-arg name="customerDao" ref="customerDao"/>
     </bean>
 
     <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">

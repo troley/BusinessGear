@@ -5,7 +5,7 @@ import com.renarcus.businessgear.model.validator.money.Money;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
+import java.util.List;
 
 /**
  * Created by Troley on 10-4-2017
@@ -34,6 +34,11 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
+
+    @NotNull
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "products", cascade = CascadeType.MERGE)
+    private List<Customer> customers;
+
 
     public Product() {
     }
@@ -84,5 +89,13 @@ public class Product {
     public void setCategory(Category category) {
         this.category = category;
     }
+/*
+    public List<Customer> getCustomers() {
+        return customers;
+    }
 
+    public void setCustomers(List<Customer> customers) {
+        this.customers = customers;
+    }
+*/
 }

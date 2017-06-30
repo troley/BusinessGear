@@ -79,5 +79,8 @@
     <orderEntry type="library" scope="TEST" name="Maven: net.bytebuddy:byte-buddy-agent:1.4.26" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.objenesis:objenesis:2.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:4.3.7.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.tensorflow:tensorflow:1.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tensorflow:libtensorflow:1.2.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tensorflow:libtensorflow_jni:1.2.0" level="project" />
   </component>
 </module>

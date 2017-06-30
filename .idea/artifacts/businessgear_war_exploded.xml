@@ -43,6 +43,9 @@
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
           <element id="library" level="project" name="Maven: org.mindrot:jbcrypt:0.4" />
+          <element id="library" level="project" name="Maven: org.tensorflow:tensorflow:1.2.0" />
+          <element id="library" level="project" name="Maven: org.tensorflow:libtensorflow:1.2.0" />
+          <element id="library" level="project" name="Maven: org.tensorflow:libtensorflow_jni:1.2.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">

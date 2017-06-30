@@ -20,6 +20,7 @@
                     password-parameter="password"
                     default-target-url="/crud/products"
                     authentication-failure-url="/admin"/>
+        <csrf disabled="true"/>
     </http>
 
     <authentication-manager id="authManager">

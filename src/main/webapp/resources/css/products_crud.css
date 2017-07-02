@@ -100,7 +100,8 @@ table {
 /* MEDIA */
 
 @media (max-width: 991px) {
-    .default-crud-field {
+    .default-crud-field,
+    .default-crud-textarea {
         width: 100%;
     }
 }

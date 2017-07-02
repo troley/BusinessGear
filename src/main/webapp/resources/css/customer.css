@@ -104,3 +104,8 @@ header {
     max-height: 280px;
     overflow: auto;
 }
+
+#chosenProductsList {
+    max-height: 100px;
+    overflow: auto;
+}

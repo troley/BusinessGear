@@ -10,7 +10,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.tensorflow.Graph;
 
 import java.util.List;
 
@@ -28,23 +27,19 @@ public class CustomerController {
     }
 
     @GetMapping("/interested")
-    public String interested(Model model, BindingResult result) {
+    public String interested(Model model) {
         List<Product> products = productService.getAllItems();
-
         model.addAttribute("products", products);
         model.addAttribute("command", new Customer());
-
         return "/customer/interested";
     }
-
+/*
     @PostMapping("/registration")
-    public String customerRegistration(@ModelAttribute Customer customer, BindingResult result){
+    public String customerRegistration(@ModelAttribute Customer customer, BindingResult result) {
         // testing customer registration in
         // com.renarcus.businessgear.rest.controller.RestCustomerController
         // method /interested
-        Graph g = new Graph();
-
-
         return null;
     }
+*/
 }

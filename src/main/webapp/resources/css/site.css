@@ -124,28 +124,20 @@ header {
     color: white;
 }
 
-#interestForm .form-inputs {
+.form-inputs {
     width: 350px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
-#interestEmail {
+#interestButton {
     border: none;
-    border-radius: 5px 0 0 5px;
-    height: 45px;
-    width: 230px;
-    padding-left: 5px;
-    font-size: 16px;
-}
-
-#interestSubmit {
-    border: none;
-    border-radius: 0 5px 5px 0;
+    border-radius: 5px;
     background-color: #515a5f;
     color: white;
     height: 45px;
-    width: 120px;
+    width: 180px;
     margin-left: -4px;
     font-size: 16px;
     font-weight: 600;
@@ -153,8 +145,10 @@ header {
     transition: background-color .3s;
 }
 
-#interestSubmit:hover {
+#interestButton:hover {
+    border: 2px solid #bf0000;
     background-color: black;
+    color: #bf0000;
 }
 
 .row-margins {
@@ -538,17 +532,11 @@ footer a:hover {
         width: 100% !important;
     }
 
-    #interestEmail {
+    #interestButton {
         display: block;
         width: 100%;
         border-radius: 5px;
-    }
-
-    #interestSubmit {
-        display: block;
-        width: 100%;
-        border-radius: 5px;
-        margin-left: 0.5px;
+        margin-left: .5px;
 
     }
 

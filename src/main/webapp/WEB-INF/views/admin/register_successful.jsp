@@ -18,9 +18,12 @@
             <section>
                 <div class="center-block">
                     <div class="row">
-                        <div style="width: 500px; height: 150px; background-color: lightgreen; margin: 35px auto 0 auto; text-align:center;">
-                            <h2 style="padding-top: 60px;">Successfully registered.</h2>
-                        </div>
+                        <a href="/admin">
+                            <div style="width: 500px; height: 150px; background-color: lightgreen; margin: 35px auto 0 auto; text-align:center;">
+                                <h2 style="padding-top: 20px;">Successfully registered.</h2>
+                                <h3>Click here to go back to admin page</h3>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>
